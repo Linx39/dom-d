@@ -1,0 +1,61 @@
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  overflow: hidden;
+
+  clip: rect(0 0 0 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+a,
+button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0;
+
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+  text-align: left;
+
+  background-color: inherit;
+  border: none;
+
+  cursor: pointer;
+}

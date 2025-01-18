@@ -1,0 +1,21 @@
+.burger-btn {
+  position: relative;
+
+  @width: 22px;
+  @height: 18px;
+
+  width: @width;
+  height: @width;
+
+  .burger-icon(@width, @height);
+
+  @media (min-width: @md-width) {
+    @width: 35px;
+    @height: 28px;
+    width: @width;
+    height: @width;
+    .burger-icon(@width, @height);
+  }
+
+
+}

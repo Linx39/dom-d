@@ -1,0 +1,82 @@
+.communication-list {
+  display: flex;
+  gap: 10px;
+
+  @media (min-width: @xl-width) {
+    gap: 15px;
+  }
+}
+
+.communication-list__item {
+  // display: flex;
+}
+
+.communication-list__link {
+  position: relative;
+  display: flex;
+
+  @media (min-width: @md-width) {
+    align-items: center;
+    column-gap: 4px;
+  }
+
+  @media (min-width: @xl-width) {
+    justify-content: center;
+    column-gap: 15px;
+
+    width: 140px;
+    min-height: 46px;
+
+    background-color: #ffffff38;
+  }
+}
+
+.communication-list__icon {
+  flex-shrink: 0;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.communication-list__link--viber .communication-list__icon {
+  background: #7C509A;
+
+  &::before {
+    background-image: url("../../images/viber.svg");
+    background-size: 18px 19px;
+  }
+}
+
+.communication-list__link--telegram .communication-list__icon {
+  background-color: #039BE5;
+
+  &::before {
+    background-image: url("../../images/telegram.svg");
+    background-size: 19px 15px;
+  }
+}
+
+.communication-list__name {
+  display: none;
+
+  @media (min-width: @md-width) {
+    display: block;
+    font-size: 14px;
+  }
+}

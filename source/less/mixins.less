@@ -1,0 +1,106 @@
+.wrapper-width {
+  width: 100%;
+
+  @media (min-width: @xl-width) {
+    max-width: @max-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.wrapper-padding {
+  padding-right: var(--sm-padding);
+  padding-left: var(--sm-padding);
+
+  @media (min-width: @md-width) {
+    padding-right: var(--md-padding);
+    padding-left: var(--md-padding);
+  }
+
+  @media (min-width: @xl-width) {
+    padding-right: var(--xl-padding);
+    padding-left: var(--xl-padding);
+  }
+
+  @media (min-width: @xxl-width) {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: var(--xxl-padding);
+    padding-left: var(--xxl-padding);
+  }
+}
+
+.wrapper {
+  .wrapper-width();
+  .wrapper-padding();
+}
+
+.font-basic {
+  font-size: 16px;
+  line-height: 117.2%;
+  font-weight: 400;
+}
+
+.font-basic b {
+  font-weight: 700;
+}
+
+.font-title {
+  font-size: 30px;
+}
+
+.font-special {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+.font-special b {
+  font-weight: 700;
+}
+
+.burger-icon(@width, @height) {
+  &::before{
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+
+    width: @width;
+    height: 2px;
+    margin: auto 0;
+
+    background-color: var(--color-font-light);
+    box-shadow: 0 calc((-@height) / 2 + 1px) var(--color-font-light), 0 calc(@height / 2 - 1px) var(--color-font-light);
+
+    content: "";
+  }
+}
+
+.cross-icon(@size) {
+  position: relative;
+
+  width: @size;
+  height: @size;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: calc((@size - 2px) / 2);
+
+    width: 2px;
+    height: @size;
+    margin: 0 auto;
+
+    background-color: currentColor;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

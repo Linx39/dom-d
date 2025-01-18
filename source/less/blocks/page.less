@@ -1,0 +1,24 @@
+.page {
+  min-width: @min-width;
+  height: 100%;
+  margin: 0 auto;
+
+  font-family: var(--font-page);
+  .font-basic();
+  -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+  margin: 0;
+
+  color: var(--color-font-basic);
+  background-color: var(--color-back-basic);
+}
+
+.page__main {
+  flex-grow: 1;
+}

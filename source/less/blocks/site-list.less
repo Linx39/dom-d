@@ -1,0 +1,26 @@
+.site-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.site-list__sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.site-list__link,
+.site-list__sublink {
+  &:hover {
+    color: var(--color-accent);
+  }
+}

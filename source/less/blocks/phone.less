@@ -1,0 +1,23 @@
+.phone {
+  position: relative;
+  padding-left: 24px;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+
+    width: 19px;
+    height: 19px;
+
+    background-color: var(--color-accent);
+    mask-image: url("../../images/phone.svg");
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  @media (min-width: @md-width) {
+    padding-left: 28px;
+  }
+}
