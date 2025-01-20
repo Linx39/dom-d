@@ -8,7 +8,7 @@
   }
 
   @media (min-width: @xxl-width) {
-    gap: 40px;
+    gap: 48px 38px;
   }
 }
 
@@ -33,6 +33,7 @@
 
 .social-list__link {
   position: relative;
+  flex-shrink: 0;
 
   width: 40px;
   height: 40px;
@@ -78,8 +79,12 @@
   }
 }
 
-.social-list__description {
+.social-list__link-text {
   @media (min-width: @md-width) {
     font-size: 18px;
+  }
+
+  @media (min-width: @xxl-width) {
+    width: max-content;
   }
 }

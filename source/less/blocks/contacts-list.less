@@ -7,16 +7,9 @@
   line-height: 174%;
 }
 
-.contacts-list__link-name {
-  display: none;
-
-  @media (min-width: @xl-width) {
-    display: inline;
-  }
-}
-
 .contacts-list__link {
   position: relative;
+
   padding-left: 39px;
 
   &::before {
@@ -34,6 +27,7 @@
   }
 
   &--adress::before {
+    top: 4px;
     mask-image: url("../../images/map.svg");
   }
 
@@ -42,6 +36,15 @@
   }
 
   &--phone::before {
+    top: 7px;
     mask-image: url("../../images/phone.svg");
+  }
+}
+
+.contacts-list__link-name {
+  display: none;
+
+  @media (min-width: @xl-width) {
+    display: inline;
   }
 }
