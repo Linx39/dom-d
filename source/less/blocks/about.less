@@ -1,0 +1,232 @@
+.about {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 56px;
+
+  background-image: url("../../images/about/about-bg-mobile.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+
+    background-color: #ffffffe3;
+  }
+
+  @media (min-width: @md-width) {
+    padding-top: 100px;
+    padding-bottom: 97px;
+
+    background-image: url("../../images/about/about-bg-tablet.webp");
+  }
+
+  @media (min-width: @xl-width) {
+    padding-top: 81px;
+    padding-bottom: 81px;
+
+    background-image: url("../../images/about/about-bg-laptop.webp");
+  }
+
+  @media (min-width: @xxl-width) {
+    padding-top: 89px;
+    padding-bottom: 75px;
+
+    background-image: url("../../images/about/about-bg-desktop.webp");
+  }
+}
+
+.about__wrapper {
+  position: relative;
+
+  @media (min-width: @xl-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 10px;
+  }
+}
+
+.about__title {
+  margin-bottom: 27px;
+
+  font-size: 30px;
+  line-height: 117%;
+  font-weight: 400;
+  text-align: center;
+
+  @media (min-width: @md-width) {
+    margin-bottom: 54px;
+
+    font-size: 48px;
+    text-wrap: balance;
+  }
+
+  @media (min-width: @xl-width) {
+    grid-column: 1 / -1;
+
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @xxl-width) {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 87px;
+  }
+}
+
+.about__image {
+  position: relative;
+
+  width: 100%;
+  max-width: 430px;
+  margin-bottom: 28px;
+
+  aspect-ratio: 340 / 539;
+
+  @media (min-width: @md-width) {
+    max-width: unset;
+    margin-bottom: 54px;
+
+    aspect-ratio: 709 / 539;
+  }
+
+  @media (min-width: @xl-width) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    margin-bottom: 0;
+    padding-right: 10px;
+
+    aspect-ratio: 350 / 539;
+  }
+
+  @media (min-width: @xxl-width) {
+    padding-right: 29px;
+
+    aspect-ratio: 436 / 539;
+  }
+}
+
+.about__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__description {
+  position: absolute;
+  left: 31px;
+  bottom: 26px;
+
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-font-light);
+
+  @media (min-width: @md-width) {
+  }
+
+  @media (min-width: @xl-width) {
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+}
+
+.about__cards {
+
+  @media (min-width: @xl-width) {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+
+    align-self: center;
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+}
+
+.about__list {
+  margin-bottom: 14px;
+
+  @media (min-width: @md-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px 27px;
+
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @xl-width) {
+    gap: 42px 20px;
+  }
+
+  @media (min-width: @xxl-width) {
+    gap: 47px 20px;
+  }
+
+}
+
+.about__item {
+  position: relative;
+  padding: 35px 19px 30px 53px;
+
+  font-size: 18px;
+  line-height: 150%;
+
+  background-color: var(--color-white);
+  box-shadow: 0px 0px 74px 0px #27110a40;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 42px;
+    left: 21px;
+
+    width: 21px;
+    height: 23px;
+    background-image: url("../../images/union.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:not(:first-of-type) {
+    display: none;
+  }
+
+  @media (min-width: @md-width) {
+    padding: 0;
+    padding-left: 33px;
+
+    background-color: unset;
+    box-shadow: none;
+
+    &:not(:first-of-type) {
+      display: block;
+    }
+
+    &::after {
+      top: 7px;
+      left: 0;
+    }
+  }
+
+  @media (min-width: @xl-width) {
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+
+}
+
+.about__navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  @media (min-width: @md-width) {
+    display: none;
+  }
+}
