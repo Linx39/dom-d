@@ -1,0 +1,181 @@
+.statistics {
+  padding-top: 67px;
+  padding-bottom: 67px;
+
+  color: var(--color-font-light);
+  background-color: var(--color-black-04);
+
+  @media (min-width: @md-width) {
+    padding-top: 57px;
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: @xl-width) {
+    padding-top: 33px;
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: @xxl-width) {
+    padding-top: 66px;
+    padding-bottom: 60px;
+  }
+}
+
+.statistics__wrapper {
+
+  @media (min-width: @md-width) {
+  }
+
+  @media (min-width: @xl-width) {
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+}
+
+.statistics__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 6px;
+
+  margin-right: 20px;
+
+  @media (min-width: @md-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px 25px;
+
+    margin-right: 0;
+  }
+
+  @media (min-width: @xl-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  @media (min-width: @xxl-width) {
+    gap: 30px;
+  }
+}
+
+.statistics__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @md-width) {
+    flex-direction: row;
+    align-items: start;
+    gap: 17px;
+
+    &--link {
+      grid-column: 1 / -1;
+
+      gap: 21px;
+    }
+  }
+
+  @media (min-width: @xl-width) {
+    gap: 19px;
+
+    &--link {
+      grid-column: auto;
+      align-items: center;
+
+      gap: 21px;
+    }
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+}
+
+.statistics__value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 75px;
+
+  font-size: 64px;
+  line-height: 117%;
+  font-weight: 700;
+  text-align: center;
+
+  color: var(--color-accent);
+
+  @media (min-width: @md-width) {
+    min-width: 73px;
+    min-height: unset;
+    text-align: left;
+  }
+
+  @media (min-width: @xl-width) {
+    justify-content: start;
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+}
+
+.statistics__name {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 400;
+  text-align: center;
+
+  @media (min-width: @md-width) {
+    margin-top: 8px;
+
+    font-size: 18px;
+    text-align: left;
+  }
+
+  @media (min-width: @xl-width) {
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+
+}
+
+.statistics__link {
+  width: 47px;
+  height: 47px;
+
+  background-image: url("../../images/youtube.svg");
+  background-size: 47px 47px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @md-width) {
+    width: 60px;
+    height: 60px;
+
+    background-size: 60px 60px;
+  }
+
+  @media (min-width: @xl-width) {
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+}
+
+.statistics__item--link .statistics__name {
+  & span {
+    display: none;
+  }
+
+  @media (min-width: @md-width) {
+    & span {
+      display: inline;
+    }
+  }
+
+  @media (min-width: @xxl-width) {
+    & br {
+      display: none;
+    }
+  }
+}
