@@ -1,17 +1,4 @@
-.communication-list {
-  display: flex;
-  gap: 10px;
-
-  @media (min-width: @xl-width) {
-    gap: 15px;
-  }
-}
-
-.communication-list__item {
-  // display: flex;
-}
-
-.communication-list__link {
+.messenger-link {
   position: relative;
   display: flex;
 
@@ -29,9 +16,19 @@
 
     background-color: #ffffff38;
   }
+
+  &--full {
+    justify-content: center;
+    column-gap: 15px;
+
+    width: 140px;
+    min-height: 46px;
+
+    background-color: var(--color-white);
+  }
 }
 
-.communication-list__icon {
+.messenger-link__icon {
   flex-shrink: 0;
   position: relative;
 
@@ -54,29 +51,33 @@
   }
 }
 
-.communication-list__link--viber .communication-list__icon {
+.messenger-link--viber .messenger-link__icon {
   background: #7C509A;
 
   &::before {
-    background-image: url("../../images/viber.svg");
+    background-image: url("../../images/icons/viber.svg");
     background-size: 18px 19px;
   }
 }
 
-.communication-list__link--telegram .communication-list__icon {
+.messenger-link--telegram .messenger-link__icon {
   background-color: #039BE5;
 
   &::before {
-    background-image: url("../../images/telegram.svg");
+    background-image: url("../../images/icons/telegram.svg");
     background-size: 19px 15px;
   }
 }
 
-.communication-list__name {
+.messenger-link__name {
   display: none;
 
   @media (min-width: @md-width) {
     display: block;
     font-size: 14px;
   }
+}
+
+.messenger-link--full .messenger-link__name {
+  display: block;
 }

@@ -28,22 +28,18 @@
               </p>
             </div>
 
-            <div class="main-nav__communication">
-              <p class="main-nav__communication-description">Нажмите, чтобы начать общение</p>
-              <ul class="main-nav__communication-list communication-list">
-                <li class="communication-list__item">
-                  <a class="communication-list__link communication-list__link--viber" href="#">
-                    <span class="communication-list__icon"></span>
-                    <span class="communication-list__name">Viber</span>
-                  </a>
-                </li>
-                <li class="communication-list__item">
-                  <a class="communication-list__link communication-list__link--telegram" href="#">
-                    <span class="communication-list__icon"></span>
-                    <span class="communication-list__name">Telegram</span>
-                  </a>
-                </li>
-              </ul>
+            <div class="main-nav__messenger">
+              <p class="main-nav__messenger-text">Нажмите, чтобы начать общение</p>
+              <div class="main-nav__messenger-list">
+                <a class="messenger-link messenger-link--viber" href="#">
+                  <span class="messenger-link__icon"></span>
+                  <span class="messenger-link__name">Viber</span>
+                </a>
+                <a class="messenger-link messenger-link--telegram" href="#">
+                  <span class="messenger-link__icon"></span>
+                  <span class="messenger-link__name">Telegram</span>
+                </a>
+              </div>
             </div>
 
             <div class="main-nav__connection connection">
@@ -117,7 +113,7 @@
             <h2 class="intro__title">Сделаем ваш<span> Дом</span></h2>
             <p class="intro__subtitle">готовым к комфортному <br>проживанию</p>
 
-            <p class="intro__description">
+            <p class="intro__text">
               Строительство деревянных домов «под ключ»: коттеджи, беседки, бани, дома из клееного бруса
             </p>
 
@@ -132,7 +128,7 @@
 
             <div class="intro__calculation calculation">
               <h3 class="calculation__title">Заказать расчет</h3>
-              <p class="calculation__description">
+              <p class="calculation__text">
                 Оказываем  услуги комплексно, совмещая отдельные виды работ
               </p>
               <a class="calculation__btn app-btn" href="#calculation" data-modal="#calculation">Заказать расчет</a>
@@ -210,7 +206,7 @@
             <div class="offer__content">
               <div class="offer__content-wrapper">
                 <h3 class="offer__subtitle">Cтроительство дома не&nbsp;покажешь картинкой</h3>
-                <p class="offer__description">За каждым домом стоит целая история, смотри полезные  презентации у нас на канале. </p>
+                <p class="offer__description">За каждым домом стоит целая история, смотри полезные  презентации у нас на канале.</p>
                 <div class="offer__video">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="./images/offer/offer-desktop.webp">
@@ -232,27 +228,27 @@
             <ul class="advantages__list">
               <li class="advantages__item advantages__item--wallet">
                 <h3 class="advantages__item-title">Не поднимаем стоимость</h3>
-                <p class="advantages__item-description">Фиксируем <b>стоимость</b> работ в договоре</p>
+                <p class="advantages__item-text">Фиксируем <b>стоимость</b> работ в договоре</p>
               </li>
               <li class="advantages__item advantages__item--appointment">
                 <h3 class="advantages__item-title">Поэтапная оплата</h3>
-                <p class="advantages__item-description">Оплата каждого вида работ <b>разбита</b> на 2 части (50%&nbsp;аванс 50%&nbsp;по завершению)</p>
+                <p class="advantages__item-text">Оплата каждого вида работ <b>разбита</b> на 2 части (50%&nbsp;аванс 50%&nbsp;по завершению)</p>
               </li>
               <li class="advantages__item advantages__item--clock">
                 <h3 class="advantages__item-title">Соблюдаем сроки</h3>
-                <p class="advantages__item-description">Несем <b>ответственность</b> за соблюдение сроков.</p>
+                <p class="advantages__item-text">Несем <b>ответственность</b> за соблюдение сроков.</p>
               </li>
               <li class="advantages__item advantages__item--branch">
                 <h3 class="advantages__item-title">Экологичность</h3>
-                <p class="advantages__item-description">Дом <b>строится</b> из натуральных материалов</p>
+                <p class="advantages__item-text">Дом <b>строится</b> из натуральных материалов</p>
               </li>
               <li class="advantages__item advantages__item--architecture">
                 <h3 class="advantages__item-title">Самостоятельно</h3>
-                <p class="advantages__item-description">Закупаем и <b>доставляем</b> на объект, качественные материалы и расходники</p>
+                <p class="advantages__item-text">Закупаем и <b>доставляем</b> на объект, качественные материалы и расходники</p>
               </li>
               <li class="advantages__item advantages__item--brush">
                 <h3 class="advantages__item-title">Проводим уборку</h3>
-                <p class="advantages__item-description">В процессе работ и <b>вывозим</b> мусор после завершения работ. </p>
+                <p class="advantages__item-text">В процессе работ и <b>вывозим</b> мусор после завершения работ. </p>
               </li>
             </ul>
           </div>
@@ -344,7 +340,7 @@
                 <img src="./images/about/about-mobile.webp" width="335" height="539" alt="Фото руководителя.">
               </picture>
 
-              <p class="about__description">
+              <p class="about__text">
                 <b>Здравствуйте, меня зовут<br>
                 Ярослав&nbsp;Доля.</b><br>
                 Я руководитель компании <b>DOM-D</b></p>
@@ -410,6 +406,88 @@
             </ul>
           </div>
         </section>
+
+        <section class="brands">
+          <div class="brands__wrapper wrapper">
+            <h2 class="brands__title">Используем только <b>экологически чистые и профессиональные материалы</b></h2>
+
+            <div class="brands__cards swiper">
+              <ul class="brands__list swiper-wrapper">
+                <li class="brands__item swiper-slide">
+                  <img src="./images/brands/remmers.webp" width="214" height="70" alt="Логотип партнера.">
+                </li>
+                <li class="brands__item swiper-slide">
+                  <img src="./images/brands/sadolin.webp" width="154" height="83" alt="Логотип партнера.">
+                </li>
+                <li class="brands__item swiper-slide">
+                  <img src="./images/brands/pinotex.webp" width="138" height="110" alt="Логотип партнера.">
+                </li>
+                <li class="brands__item swiper-slide">
+                  <img src="./images/brands/adler.webp" width="238" height="80" alt="Логотип партнера.">
+                </li>
+                <li class="brands__item swiper-slide">
+                  <img src="./images/brands/sadolin.webp" width="154" height="83" alt="Логотип партнера.">
+                </li>
+                <li class="brands__item swiper-slide">
+                  <img src="./images/brands/pinotex.webp" width="138" height="110" alt="Логотип партнера.">
+                </li>
+              </ul>
+
+              <div class="brands__navigation">
+                <button class="brands__navigation-btn brands__navigation-btn--prev navigation-btn navigation-btn--prev">
+                  <span class="visually-hidden">Предыдущий слайд</span>
+                </button>
+                <button class="brands__navigation-btn brands__navigation-btn--next navigation-btn navigation-btn--next">
+                  <span class="visually-hidden">Следующий слайд</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contacts">
+          <div class="contacts__wrapper wrapper">
+            <h2 class="contacts__title"><b>Наши контакты</b></h2>
+
+            <div class="contacts__container">
+              <form class="contacts__form">
+                <h3 class="contacts__form-title">Задать вопрос</h3>
+                <p class="contacts__form-text">Остались вопросы? Наши эксперты ответят вам в ближайшее рабочее время!</p>
+                <label class="contacts__form-label">
+                  <textarea name="text" placeholder="Ваш вопросы" required></textarea>
+                </label>
+                <label class="contacts__form-input">
+                  <input name="phone" placeholder="Телефон" required>
+                </label>
+                <button class="contacts__form-btn app-btn" type="submit">Отправить вопрос</button>
+              </form>
+            </div>
+
+            <div class="contacts__container">
+              <div class="contacts__list">
+                <a class="contacts-link contacts-link--adress">Украина, г. Одесса<br>ул. Комитетская, 24Б</a>
+                <a class="contacts-link contacts-link--email">
+                  <span class="contacts-link-name">Эл.почта: </span>
+                  odessadomd@gmail.com
+                </a>
+                <div class="contacts-list__messenger-list">
+                  <a class="messenger-link messenger-link--full messenger-link--viber" href="#">
+                    <span class="messenger-link__icon"></span>
+                    <span class="messenger-link__name">Viber</span>
+                  </a>
+                  <a class="messenger-link messenger-link--full messenger-link--telegram" href="#">
+                    <span class="messenger-link__icon"></span>
+                    <span class="messenger-link__name">Telegram</span>
+                  </a>
+                </div>
+                <a class="contacts-link contacts-link--phone">
+                  +38 (098) 271-50-35
+                  <span class="contacts-link__text">Мы на связи</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer class="page__footer page-footer">
@@ -457,20 +535,14 @@
 
           <div class="page-footer__contacts">
             <h3 class="page-footer__contacts-title">Контакты</h3>
-            <ul class="page-footer__contacts-list contacts-list">
-              <li class="contacts-list__item">
-                <a class="contacts-list__link contacts-list__link--adress">Украина, г. Одесса<br>ул. Комитетская, 24Б</a>
-              </li>
-              <li class="contacts-list__item">
-                <a class="contacts-list__link contacts-list__link--email">
-                  <span class="contacts-list__link-name">Эл.почта: </span>
-                  odessadomd@gmail.com
-                </a>
-              </li>
-              <li class="contacts-list__item">
-                <a class="contacts-list__link contacts-list__link--phone">+38 (098) 271-50-35</a>
-              </li>
-            </ul>
+            <div class="page-footer__contacts-list">
+              <a class="contacts-link contacts-link--adress">Украина, г. Одесса<br>ул. Комитетская, 24Б</a>
+              <a class="contacts-link contacts-link--email">
+                <span class="contacts-link__name">Эл.почта: </span>
+                odessadomd@gmail.com
+              </a>
+              <a class="contacts-link contacts-link--phone">+38 (098) 271-50-35</a>
+            </div>
           </div>
 
           <ul class="page-footer__social-list social-list">

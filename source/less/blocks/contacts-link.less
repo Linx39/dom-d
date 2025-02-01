@@ -1,13 +1,4 @@
-.contacts-list {
-  display: flex;
-  flex-direction: column;
-  // gap: 20px;
-
-  font-size: 18px;
-  line-height: 174%;
-}
-
-.contacts-list__link {
+.contacts-link {
   position: relative;
 
   padding-left: 39px;
@@ -28,23 +19,29 @@
 
   &--adress::before {
     top: 4px;
-    mask-image: url("../../images/map.svg");
+    mask-image: url("../../images/icons/map.svg");
   }
 
   &--email::before {
-    mask-image: url("../../images/message.svg");
+    mask-image: url("../../images/icons/message.svg");
   }
 
   &--phone::before {
     top: 7px;
-    mask-image: url("../../images/phone.svg");
+    mask-image: url("../../images/icons/phone.svg");
   }
 }
 
-.contacts-list__link-name {
+.contacts-link__name {
   display: none;
 
   @media (min-width: @xl-width) {
     display: inline;
   }
+}
+
+.contacts-link__text {
+  margin-top: 10px;
+
+  color: var(--color-accent);
 }
