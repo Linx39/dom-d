@@ -450,40 +450,47 @@
             <h2 class="contacts__title"><b>Наши контакты</b></h2>
 
             <div class="contacts__container">
-              <form class="contacts__form">
-                <h3 class="contacts__form-title">Задать вопрос</h3>
-                <p class="contacts__form-text">Остались вопросы? Наши эксперты ответят вам в ближайшее рабочее время!</p>
-                <label class="contacts__form-label">
-                  <textarea name="text" placeholder="Ваш вопросы" required></textarea>
-                </label>
-                <label class="contacts__form-input">
-                  <input name="phone" placeholder="Телефон" required>
-                </label>
-                <button class="contacts__form-btn app-btn" type="submit">Отправить вопрос</button>
-              </form>
-            </div>
+              <div class="contacts__subcontainer">
+                <h3 class="contacts__subtitle">Задать вопрос</h3>
+                <p class="contacts__text">Остались вопросы? Наши эксперты ответят вам в ближайшее рабочее время!</p>
 
-            <div class="contacts__container">
-              <div class="contacts__list">
-                <a class="contacts-link contacts-link--adress">Украина, г. Одесса<br>ул. Комитетская, 24Б</a>
-                <a class="contacts-link contacts-link--email">
-                  <span class="contacts-link-name">Эл.почта: </span>
-                  odessadomd@gmail.com
-                </a>
-                <div class="contacts-list__messenger-list">
-                  <a class="messenger-link messenger-link--full messenger-link--viber" href="#">
-                    <span class="messenger-link__icon"></span>
-                    <span class="messenger-link__name">Viber</span>
+                <form class="contacts__form">
+                  <label class="contacts__form-label">
+                    <textarea class="contacts__form-field contacts__form-field--textarea" name="text" placeholder="Ваш вопрос" required></textarea>
+                  </label>
+                  <label class="contacts__form-label">
+                    <input class="contacts__form-field contacts__form-field--input" name="phone" placeholder="Телефон" required>
+                  </label>
+                  <button class="contacts__form-btn app-btn" type="submit">Отправить вопрос</button>
+                </form>
+              </div>
+
+              <div class="contacts__subcontainer">
+                <h3 class="contacts__subtitle">Мы на связи</h3>
+
+                <div class="contacts__list">
+                  <a class="contacts-link contacts-link--adress">Украина, г. Одесса<br>ул. Комитетская, 24Б</a>
+                  <a class="contacts-link contacts-link--email">
+                    <span class="contacts-link-name">Эл.почта: </span>
+                    odessadomd@gmail.com
                   </a>
-                  <a class="messenger-link messenger-link--full messenger-link--telegram" href="#">
-                    <span class="messenger-link__icon"></span>
-                    <span class="messenger-link__name">Telegram</span>
+                  <div class="contacts__messenger-list">
+                    <a class="messenger-link messenger-link--full messenger-link--viber" href="#">
+                      <span class="messenger-link__icon"></span>
+                      <span class="messenger-link__name">Viber</span>
+                    </a>
+                    <a class="messenger-link messenger-link--full messenger-link--telegram" href="#">
+                      <span class="messenger-link__icon"></span>
+                      <span class="messenger-link__name">Telegram</span>
+                    </a>
+                  </div>
+                  <a class="contacts__phone contacts-link contacts-link--phone">
+                    +38 (098) 271-50-35
+                    <span class="contacts__phone-text">Мы на связи</span>
                   </a>
                 </div>
-                <a class="contacts-link contacts-link--phone">
-                  +38 (098) 271-50-35
-                  <span class="contacts-link__text">Мы на связи</span>
-                </a>
+
+                <a class="contacts__call-btn app-btn" href="#call" data-modal="#call">Перезвонить мне</a>
               </div>
             </div>
           </div>
