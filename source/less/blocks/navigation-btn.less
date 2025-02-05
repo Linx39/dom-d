@@ -12,9 +12,17 @@
     background-repeat: no-repeat;
     background-size: 29px 24px;
     background-position: center;
+
+    opacity: 1;
+    transition: opacity .5s ease;
   }
 
   &--next::after {
     transform: rotate(180deg);
+  }
+
+  &--disabled::after {
+    opacity: .2;
+    cursor: default;
   }
 }

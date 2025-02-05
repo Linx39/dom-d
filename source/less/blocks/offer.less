@@ -1,56 +1,49 @@
 .offer {
-  padding-top: 70px;
+  padding-top: 68px;
 
   @media (min-width: @md-width) {
-    padding-top: 100px;
+    padding-top: 95px;
   }
 
   @media (min-width: @xl-width) {
-    padding-top: 130px;
+    padding-top: 127px;
   }
 
   @media (min-width: @xxl-width) {
-    padding-top: 145px;
+    padding-top: 142px;
   }
-}
-
-.offer__wrapper {
 }
 
 .offer__title {
-  margin-bottom: 24px;
+  margin-bottom: 21px;
 
-  font-size: 30px;
-  line-height: 100%;
-  font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
 
   @media (min-width: @md-width) {
-    font-size: 48px;
+    margin-bottom: 22px;
   }
 
   @media (min-width: @xxl-width) {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 }
 
 .offer__text {
-  margin-bottom: 27px;
+  margin-bottom: 124px;
 
   font-size: 24px;
   line-height: 117%;
   text-align: center;
 
   @media (min-width: @md-width) {
-    margin-bottom: 41px;
+    margin-bottom: 40px;
 
     font-size: 30px;
     text-wrap: balance;
   }
 
   @media (min-width: @xl-width) {
-    margin-bottom: 56px;
+    margin-bottom: 53px;
   }
 
   @media (min-width: @xxl-width) {
@@ -61,9 +54,24 @@
 }
 
 .offer__content {
+  position: relative;
+
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
   justify-items: center;
+  gap: 20px;
+
+  min-height: 588px;
+  padding: 48px 8px 52px;
+
+  color: var(--color-font-light);
+  background-color: var(--color-back-dark-03);
+
+  background-image: url("../../images/offer/offer-bg-mobile.webp");
+  background-size: 326px 466px;
+  background-repeat: no-repeat;
+  background-position: right bottom 37px;
 
   @media (min-width: @md-width) {
     display: grid;
@@ -75,10 +83,10 @@
 
     min-height: 489px;
 
-    padding: 60px 30px 34px;
+    padding: 60px 30px 33px;
 
     color: var(--color-font-light);
-    background-color: var(--color-black-04);
+    background-color: var(--color-back-dark-03);
 
     background-image: url("../../images/offer/offer-bg-tablet.webp");
     background-size: 342px 489px;
@@ -102,29 +110,6 @@
 
     background-image: url("../../images/offer/offer-bg-desktop.webp");
     background-size: 762px 489px;
-  }
-}
-
-.offer__content-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr min-content;
-  justify-items: center;
-  gap: 20px;
-
-  min-height: 588px;
-  padding: 48px 8px 52px;
-
-  color: var(--color-font-light);
-  background-color: var(--color-black-04);
-
-  background-image: url("../../images/offer/offer-bg-mobile.webp");
-  background-size: 326px 466px;
-  background-repeat: no-repeat;
-  background-position: right bottom 37px;
-
-  @media (min-width: @md-width) {
-    display: contents;
   }
 }
 
@@ -181,7 +166,7 @@
   position: relative;
 
   width: 100%;
-  max-width: 430px;
+  max-width: var(--mobile-width);
   aspect-ratio: 320 / 274;
 
   @media (min-width: @md-width) {
@@ -201,25 +186,6 @@
   @media (min-width: @xxl-width) {
     aspect-ratio: 650 / 367;
   }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-
-    width: 58px;
-    height: 58px;
-
-    background-color: #ffffff99;
-    background-image: url("../../images/icons/play.svg");
-    background-size: 24px 29px;
-    background-repeat: no-repeat;
-    background-position: left 62% center;
-
-    border-radius: 50%;
-  }
 }
 
 .offer__video img {
@@ -229,17 +195,40 @@
   object-fit: cover;
 }
 
-.offer__btn {
-  order: -1;
+.offer__video-btn {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 
-  margin-bottom: 51px;
+  width: 58px;
+  height: 58px;
+
+  background-color: var(--color-white-99);
+  background-image: url("../../images/icons/play.svg");
+  background-size: 24px 29px;
+  background-repeat: no-repeat;
+  background-position: left 62% center;
+
+  border-radius: 50%;
+}
+
+.offer__btn {
+  position: absolute;
+  top: -51px;
+  transform: translateY(-100%);
 
   @media (min-width: @md-width) {
+    position: static;
+
     grid-column: 1 / 2;
     order: unset;
 
-    margin-bottom: 32px;
+    margin-bottom: 34px;
     margin-left: 18px;
+
+    transform: none;
   }
 
   @media (min-width: @xl-width) {

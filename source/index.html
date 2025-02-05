@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="Строительство деревянных домов DOM-D">
         <title>Строительство деревянных домов DOM-D</title>
+        <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
         <link rel="stylesheet" href="./css/style.min.css">
     </head>
     <body class="page__body">
@@ -138,7 +139,7 @@
 
         <section class="products">
           <div class="products__wrapper wrapper">
-            <h2 class="products__title"><b>Оказываем  услуги комплексно</b>, совмещая отдельные виды работ</h2>
+            <h2 class="products__title title"><b>Оказываем  услуги комплексно</b>, совмещая отдельные виды работ</h2>
 
             <div class="products__cards swiper">
               <div class="products__list swiper-wrapper">
@@ -200,20 +201,22 @@
 
         <section class="offer">
           <div class="offer__wrapper wrapper">
-            <h2 class="offer__title">Приступим cегодня</h2>
+            <h2 class="offer__title title"><b>Приступим cегодня</b></h2>
             <p class="offer__text">Напишите нам, чтобы получить персональное предложение</p>
 
             <div class="offer__content">
-              <div class="offer__content-wrapper">
-                <h3 class="offer__subtitle">Cтроительство дома не&nbsp;покажешь картинкой</h3>
-                <p class="offer__description">За каждым домом стоит целая история, смотри полезные  презентации у нас на канале.</p>
-                <div class="offer__video">
-                  <picture>
-                    <source media="(min-width: 1800px)" srcset="./images/offer/offer-desktop.webp">
-                    <source media="(min-width: 992px)" srcset="./images/offer/offer-laptop.webp">
-                    <img src="./images/offer/offer-mobile.webp" width="321" height="274" alt="Презентация.">
-                  </picture>
-                </div>
+              <h3 class="offer__subtitle">Cтроительство дома не&nbsp;покажешь картинкой</h3>
+              <p class="offer__description">За каждым домом стоит целая история, смотри полезные  презентации у нас на канале.</p>
+              <div class="offer__video">
+                <picture>
+                  <source media="(min-width: 1800px)" srcset="./images/offer/offer-desktop.webp">
+                  <source media="(min-width: 992px)" srcset="./images/offer/offer-laptop.webp">
+                  <img src="./images/offer/offer-mobile.webp" width="321" height="274" alt="Презентация.">
+                </picture>
+
+                <button class="offer__video-btn">
+                  <span class="visually-hidden">Воспроизвести видео</span>
+                </button>
               </div>
 
               <a class="offer__btn app-btn" href="#calculation" data-modal="#calculation">Заказать расчет</a>
@@ -223,7 +226,7 @@
 
         <section class="advantages">
           <div class="advantages__wrapper wrapper">
-            <h2 class="advantages__title">Заботимся о Вашем <b>спокойствии</b></h2>
+            <h2 class="advantages__title title">Заботимся о Вашем <b>спокойствии</b></h2>
 
             <ul class="advantages__list">
               <li class="advantages__item advantages__item--wallet">
@@ -255,11 +258,13 @@
         </section>
 
         <section class="gallery">
-          <h2 class="gallery__title wrapper"><b>Посмотрите на&nbsp;готовые&nbsp;дома</b> с&nbsp;комплексом отделки и прокладки коммуникаций. </h2>
+          <div class="gallery__wrapper wrapper">
+            <h2 class="gallery__title title"><b>Посмотрите на&nbsp;готовые&nbsp;дома</b> с&nbsp;комплексом отделки и прокладки коммуникаций. </h2>
+          </div>
 
           <div class="gallery__cards swiper wrapper-width">
             <ul class="gallery__list swiper-wrapper">
-              <li class="gallery__item swiper">
+              <li class="gallery__item swiper-slide">
                 <div class="gallery__image">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="./images/gallery/gallery-01-desktop.webp">
@@ -268,7 +273,7 @@
                   </picture>
                 </div>
               </li>
-              <li class="gallery__item swiper">
+              <li class="gallery__item swiper-slide">
                 <div class="gallery__image">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="./images/gallery/gallery-02-desktop.webp">
@@ -277,7 +282,7 @@
                   </picture>
                 </div>
               </li>
-              <li class="gallery__item swiper">
+              <li class="gallery__item swiper-slide">
                 <div class="gallery__image">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="./images/gallery/gallery-03-desktop.webp">
@@ -286,7 +291,7 @@
                   </picture>
                 </div>
               </li>
-              <li class="gallery__item swiper">
+              <li class="gallery__item swiper-slide">
                 <div class="gallery__image">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="./images/gallery/gallery-04-desktop.webp">
@@ -295,7 +300,7 @@
                   </picture>
                 </div>
               </li>
-              <li class="gallery__item swiper">
+              <li class="gallery__item swiper-slide">
                 <div class="gallery__image">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="./images/gallery/gallery-05-desktop.webp">
@@ -304,7 +309,7 @@
                   </picture>
                 </div>
               </li>
-              <li class="gallery__item swiper">
+              <li class="gallery__item swiper-slide">
                 <div class="gallery__image">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="./images/gallery/gallery-06-desktop.webp">
@@ -330,7 +335,7 @@
 
         <section class="about">
           <div class="about__wrapper wrapper">
-            <h2 class="about__title"> Готовы <b>начать&nbsp;строить&nbsp;дом</b> с надежной компанией?</h2>
+            <h2 class="about__title title"> Готовы <b>начать&nbsp;строить&nbsp;дом</b> с надежной компанией?</h2>
 
             <div class="about__image">
               <picture>
@@ -382,6 +387,7 @@
 
         <section class="statistics">
           <div class="statistics__wrapper wrapper">
+            <h2 class="visually-hidden">Статистика</h2>
             <ul class="statistics__list">
               <li class="statistics__item">
                 <span class="statistics__value">15</span>
@@ -409,7 +415,7 @@
 
         <section class="brands">
           <div class="brands__wrapper wrapper">
-            <h2 class="brands__title">Используем только <b>экологически чистые и профессиональные материалы</b></h2>
+            <h2 class="brands__title title">Используем только <b>экологически чистые и профессиональные материалы</b></h2>
 
             <div class="brands__cards swiper">
               <ul class="brands__list swiper-wrapper">
@@ -426,10 +432,16 @@
                   <img src="./images/brands/adler.webp" width="238" height="80" alt="Логотип партнера.">
                 </li>
                 <li class="brands__item swiper-slide">
+                  <img src="./images/brands/remmers.webp" width="214" height="70" alt="Логотип партнера.">
+                </li>
+                <li class="brands__item swiper-slide">
                   <img src="./images/brands/sadolin.webp" width="154" height="83" alt="Логотип партнера.">
                 </li>
                 <li class="brands__item swiper-slide">
                   <img src="./images/brands/pinotex.webp" width="138" height="110" alt="Логотип партнера.">
+                </li>
+                <li class="brands__item swiper-slide">
+                  <img src="./images/brands/adler.webp" width="238" height="80" alt="Логотип партнера.">
                 </li>
               </ul>
 
@@ -447,7 +459,7 @@
 
         <section class="contacts">
           <div class="contacts__wrapper wrapper">
-            <h2 class="contacts__title"><b>Наши контакты</b></h2>
+            <h2 class="contacts__title title"><b>Наши контакты</b></h2>
 
             <div class="contacts__container">
               <div class="contacts__subcontainer">
@@ -567,10 +579,13 @@
               <a class="social-list__link social-list__link--youtube">
                 <span class="visually-hidden">Youtube</span>
               </a>
-              <span class="social-list__link-text">Свежие видео<br> у нас на канале</b></span>
+              <span class="social-list__link-text">Свежие видео<br> у нас на канале</span>
             </li>
           </ul>
         </div>
       </footer>
+
+      <script src="./swiper/swiper-bundle.min.js"></script>
+      <script type="module" src="./js/app.min.js"></script>
     </body>
 </html>
