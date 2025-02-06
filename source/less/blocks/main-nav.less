@@ -1,4 +1,6 @@
 .main-nav {
+  position: relative;
+
   min-height: 136px;
 
   padding-top: 22px;
@@ -80,6 +82,20 @@
 .main-nav__logo {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+
+  width: 127px;
+  height: 33px;
+
+  @media (min-width: @md-width) {
+    width: 173px;
+    height: 45px;
+  }
+}
+
+.main-nav__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: content;
 }
 
 .main-nav__slogan {
@@ -172,8 +188,12 @@
 }
 
 .main-nav__phone {
+  font-size: 14px;
+
   @media (min-width: @md-width) {
     margin-bottom: 10px;
+
+    font-size: 18px;
   }
 
   @media (min-width: @md-width) {
@@ -181,7 +201,23 @@
   }
 }
 
+.main-nav__call-btn {
+  display: none;
+
+  @media (min-width: @md-width) {
+    display: flex;
+  }
+}
 
 .main-nav__site-menu {
   display: none;
+
+  &--opened {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    display: block;
+  }
 }
