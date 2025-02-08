@@ -1,0 +1,125 @@
+.control {
+}
+
+.control__input[type="text"],
+.control__input[type="tel"] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 9px 20px;
+
+  font: inherit;
+  color: var(--color-font-extra-dark);
+  background-color: var(--color-back-light);
+
+  &:hover {
+    outline: 1px solid var(--color-accent);
+    outline-offset: -1px;
+  }
+}
+
+.control__input[type="text"]::placeholder,
+.control__input[type="tel"]::placeholder {
+  color: #8c8c8c;
+}
+
+.control__mark {
+  flex-shrink: 0;
+
+  position: relative;
+  width: 24px;
+  height: 24px;
+
+  background-color: var(--color-back-extra-light);
+  box-shadow: 0px 0px 12px 0px #00000033;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+
+    width: 12px;
+    height: 13px;
+    margin: auto;
+
+    background-color: var(--color-back-extra-light);
+
+    mask-image: url("../../images/icons/check.svg");
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    transition: opacity .5s, background-color .5s, box-shadow .5s;
+    opacity: 0;
+  }
+
+  .control:hover > &::before {
+    background-color: var(--color-accent);
+    box-shadow: 0 0 40px 0 var(--color-accent);
+
+    opacity: .6;
+  }
+
+  @media (min-width: @md-width) {
+    width: 30px;
+    height: 30px;
+
+    &::before {
+      width: 15px;
+      height: 16px;
+    }
+  }
+
+  @media (min-width: @xl-width) {
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+}
+
+.control__mark--round {
+  position: relative;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+
+  &::before {
+    width: 15px;
+    height: 16px;
+
+    background-color: #dfdfdf;
+    opacity: 1;
+  }
+}
+
+.control__input[type="checkbox"] + .control__mark {
+  width: 16px;
+  height: 16px;
+
+  &::before {
+    width: 8px;
+    height: 9px;
+  }
+}
+
+.control__input[type="radio"]:checked + .control__mark {
+  background-color: var(--color-accent);
+  box-shadow: 0 0 40px 0 var(--color-accent);
+}
+
+.control__input[type="radio"]:checked + .control__mark::before {
+  background-color: var(--color-back-extra-light);
+  opacity: 1;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark {
+  background-color: var(--color-accent);
+}
+
+.control__input[type="checkbox"]:checked + .control__mark::before {
+  background-color: var(--color-back-extra-light);
+  opacity: 1;
+}
+

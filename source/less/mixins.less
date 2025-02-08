@@ -61,20 +61,17 @@
   }
 }
 
-.cross-icon(@size) {
+.cross-icon(@size, @thickness) {
   position: relative;
-
-  width: @size;
-  height: @size;
 
   &::before,
   &::after {
     position: absolute;
     content: "";
-    top: 0;
-    left: calc((@size - 4px) / 2);
+    top: calc((100% - @size) / 2);
+    left: calc((100% - @thickness) / 2);
 
-    width: 4px;
+    width: @thickness;
     height: @size;
     margin: 0 auto;
 

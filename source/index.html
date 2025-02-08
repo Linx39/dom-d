@@ -12,7 +12,7 @@
       <header class="page-header">
         <nav class="main-nav">
           <div class="main-nav__top wrapper">
-            <button class="main-nav__site-menu-open-btn burger-btn" type="button">
+            <button class="main-nav__site-menu-open-btn burger-btn" type="button" data-modal="#site-menu">
               <span class="visually-hidden">Открыть меню</span>
             </button>
 
@@ -47,9 +47,9 @@
             </div>
           </div>
 
-          <div class="main-nav__site-menu main-nav__site-menu--opened site-menu" aria-hidden="true">
-            <div class="site-menu__wrapper" role="dialog" aria-modal="true">
-              <button class="site-menu__close-btn cross-btn">
+          <div class="main-nav__site-menu site-menu modal modal--left" id="site-menu" aria-hidden="true">
+            <div class="site-menu__wrapper modal__wrapper" role="dialog" aria-modal="true">
+              <button class="site-menu__close-btn modal__close-btn">
                 <span class="visually-hidden">Закрыть меню</span>
               </button>
 
@@ -123,12 +123,12 @@
               <li class="services-list__item">Инженерные работы</li>
             </ul>
 
-            <div class="intro__calculation calculation">
-              <h3 class="calculation__title">Заказать расчет</h3>
-              <p class="calculation__text">
+            <div class="intro__promo promo">
+              <h3 class="promo__title">Заказать расчет</h3>
+              <p class="promo__text">
                 Оказываем  услуги комплексно, совмещая отдельные виды работ
               </p>
-              <a class="calculation__btn app-btn" href="#calculation" data-modal="#calculation">Заказать расчет</a>
+              <a class="promo__btn app-btn" href="#calculation" data-modal="#calculation">Заказать расчет</a>
             </div>
           </div>
         </section>
@@ -503,6 +503,145 @@
             </div>
           </div>
         </section>
+
+        <section class="calculation modal" id="calculation" aria-hidden="true" tabindex="-1">
+          <div class="calculation__wrapper modal__wrapper">
+            <button class="calculation__close-btn modal__close-btn">
+              <span class="visually-hidden">Закрыть меню</span>
+            </button>
+
+            <h2 class="calculation__title calculation__container">Укажите <b>площадь</b> и <b>материал</b> стен Вашего дома</h2>
+            <form class="calculation__form" method="post" action="#">
+              <fieldset class="calculation__square-group calculation__container">
+                <h3 class="calculation__square-title">Площадь вашего дома:</h3>
+
+                <div class="calculation__square-list">
+                  <label class="calculation__control control">
+                    <input class="control__input visually-hidden" type="radio" name="square" value="50-100" tabindex="-1">
+                    <span class="calculation__control-mark control__mark" tabindex="0"></span>
+                    <span class="calculation__control-name">50-100м2</span>
+                  </label>
+                  <label class="calculation__control control">
+                    <input class="control__input visually-hidden" type="radio" name="square" value="100-150" tabindex="-1">
+                    <span class="calculation__control-mark control__mark" tabindex="0"></span>
+                    <span class="calculation__control-name">100-150м2</span>
+                  </label>
+                  <label class="calculation__control control">
+                    <input class="control__input visually-hidden" type="radio" name="square" value="150" checked tabindex="-1">
+                    <span class="calculation__control-mark control__mark" tabindex="0"></span>
+                    <span class="calculation__control-name">больше 150</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="calculation__materials-group calculation__container swiper">
+                <h3 class="visually-hidden">Материал вашего дома:</h3>
+
+                <div class="calculation__materials-list swiper-wrapper">
+                  <div class="calculation__card swiper-slide">
+                    <label class="calculation__materials-control control">
+                      <input class="visually-hidden control__input" type="radio" name="material" value="frame" tabindex="-1">
+                      <span class="calculation__materials-control-mark control__mark control__mark--round" tabindex="0"></span>
+                      <div class="calculation__materials-image">
+                        <picture>
+                          <source media="(min-width: 1800px)" srcset="./images/calculation/calculation-01-desktop.webp">
+                          <img src="./images/calculation/calculation-01-mobile.webp" width="160" height="142" alt="Образец дома.">
+                        </picture>
+                      </div>
+                      <span class="calculation__materials-control-name">Каркасные дома</span>
+                    </label>
+                  </div>
+                  <div class="calculation__card swiper-slide">
+                    <label class="calculation__materials-control control">
+                      <input class="visually-hidden control__input" type="radio" name="material" value="timber" checked tabindex="-1">
+                      <span class="calculation__materials-control-mark control__mark control__mark--round" tabindex="0"></span>
+                      <div class="calculation__materials-image">
+                        <picture>
+                          <source media="(min-width: 1800px)" srcset="./images/calculation/calculation-02-desktop.webp">
+                          <img src="./images/calculation/calculation-02-mobile.webp" width="160" height="142" alt="Образец дома.">
+                        </picture>
+                      </div>
+                      <span class="calculation__materials-control-name">Дома из клеёного бруса</span>
+                    </label>
+                  </div>
+                  <div class="calculation__card swiper-slide">
+                    <label class="calculation__materials-control control">
+                      <input class="visually-hidden control__input" type="radio" name="material" value="logs" tabindex="-1">
+                      <span class="calculation__materials-control-mark control__mark control__mark--round" tabindex="0"></span>
+                      <div class="calculation__materials-image">
+                        <picture>
+                          <source media="(min-width: 1800px)" srcset="./images/calculation/calculation-03-desktop.webp">
+                          <img src="./images/calculation/calculation-03-mobile.webp" width="160" height="142" alt="Образец дома.">
+                        </picture>
+                      </div>
+                      <span class="calculation__materials-control-name">Дома из брёвен</span>
+                    </label>
+                  </div>
+                  <div class="calculation__card swiper-slide">
+                    <label class="calculation__materials-control control">
+                      <input class="visually-hidden control__input" type="radio" name="material" value="fachwerk" tabindex="-1">
+                      <span class="calculation__materials-control-mark control__mark control__mark--round" tabindex="0"></span>
+                      <div class="calculation__materials-image">
+                        <picture>
+                          <source media="(min-width: 1800px)" srcset="./images/calculation/calculation-04-desktop.webp">
+                          <img src="./images/calculation/calculation-04-mobile.webp" width="160" height="142" alt="Образец дома.">
+                        </picture>
+                      </div>
+                      <span class="calculation__materials-control-name">Фахверковые дома</span>
+                    </label>
+                  </div>
+                  <div class="calculation__card swiper-slide">
+                    <label class="calculation__materials-control control">
+                      <input class="visually-hidden control__input" type="radio" name="material" value="alcove" tabindex="-1">
+                      <span class="calculation__materials-control-mark control__mark control__mark--round" tabindex="0"></span>
+                      <div class="calculation__materials-image">
+                        <picture>
+                          <source media="(min-width: 1800px)" srcset="./images/calculation/calculation-05-desktop.webp">
+                          <img src="./images/calculation/calculation-05-mobile.webp" width="160" height="142" alt="Образец дома.">
+                        </picture>
+                      </div>
+                      <span class="calculation__materials-control-name">Беседки</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="calculation__materials-scrollbar scrollbar swiper-scrollbar"></div>
+              </div>
+
+              <fieldset class="calculation__scope-group calculation__container">
+                <h3 class="visually-hidden">Объем работ:</h3>
+
+                <div class="calculation__scope-list">
+                  <label class="calculation__scope-control calculation__control control">
+                    <input class="control__input visually-hidden" type="radio" name="scope" value="turnkey" tabindex="-1">
+                    <span class="calculation__control-mark control__mark" tabindex="0"></span>
+                    <span class="calculation__control-name">Под ключ</span>
+                  </label>
+                  <label class="calculation__scope-control calculation__control control">
+                    <input class="control__input visually-hidden" type="radio" name="scope" value="box" checked tabindex="-1">
+                    <span class="calculation__control-mark control__mark" tabindex="0"></span>
+                    <span class="calculation__control-name">Коробка</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="calculation__submit-group calculation__container">
+                <label class="calculation__submit-control control">
+                  <input class="calculation__input calculation__input--phone control__input" type="tel" id="calculation-phone" name="phone" placeholder="Ваш телефон" pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$/" required>
+                </label>
+                <button class="calculation__submit-btn app-btn" type="submit">Получить расчет</button>
+              </fieldset>
+
+              <fieldset class="calculation__personal-group calculation__container">
+                <label class="calculation__personal-control control" for="personal-data">
+                  <input class="control__input visually-hidden" type="checkbox" name="personal-data" id="personal-data" checked tabindex="-1">
+                  <span class="calculation__control-mark control__mark" tabindex="0"></span>
+                  <a href="#" class="calculation__control-name">Вы соглашаетесь с условиями <b>обработки персональных данных</b></a>
+                </label>
+              </fieldset>
+            </form>
+          </div>
+        </section>
       </main>
 
       <footer class="page__footer page-footer">
@@ -578,6 +717,8 @@
           </ul>
         </div>
       </footer>
+
+      <div class="blur"></div>
 
       <script src="./swiper/swiper-bundle.min.js"></script>
       <script type="module" src="./js/app.min.js"></script>

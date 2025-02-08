@@ -1,0 +1,53 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  overflow-y: scroll;
+  pointer-events: none;
+  visibility: hidden;
+
+  &--left {
+    display: block;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.modal::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+
+.modal--opened {
+  pointer-events: auto;
+  visibility: visible;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal__wrapper {
+  position: relative;
+
+  margin: auto;
+
+  transition: transform .5s, opacity .5s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.modal--left .modal__wrapper {
+  margin: 0;
+
+  transform: translateX(-100%);
+}
+
+.modal--opened .modal__wrapper {
+  transform: translateX(0) translateY(0);
+  opacity: 1;
+}
