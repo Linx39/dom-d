@@ -43,7 +43,7 @@
 
             <div class="main-nav__connection">
               <a class="main-nav__phone phone" href="tel:+380982715035"><b>+38 (098) 271-50-35</b></a>
-              <a class="main-nav__call-btn app-btn" href="#call" data-modal="#call">Перезвонить мне</a>
+              <a class="main-nav__call-btn app-btn" href="#feedback" data-modal="#feedback">Перезвонить мне</a>
             </div>
           </div>
 
@@ -59,7 +59,7 @@
 
               <div class="site-menu__connection">
                 <a class="site-menu__phone phone" href="tel:+380982715035">+38 (098) 271-50-35</a>
-                <a class="site-menu__call-btn app-btn" href="#call" data-modal="#call">Перезвонить мне</a>
+                <a class="site-menu__call-btn app-btn" href="#feedback" data-modal="#feedback">Перезвонить мне</a>
               </div>
 
               <ul class="site-menu__site-list site-list">
@@ -463,11 +463,11 @@
                 <p class="contacts__text">Остались вопросы? Наши эксперты ответят вам в ближайшее рабочее время!</p>
 
                 <form class="contacts__form">
-                  <label class="contacts__form-label">
-                    <textarea class="contacts__form-field contacts__form-field--textarea" name="text" placeholder="Ваш вопрос" required></textarea>
+                  <label class="contacts__label control">
+                    <textarea class="contacts__input contacts__input--textarea control__input" name="text" placeholder="Ваш вопрос" required></textarea>
                   </label>
-                  <label class="contacts__form-label">
-                    <input class="contacts__form-field contacts__form-field--input" name="phone" placeholder="Телефон" required>
+                  <label class="contacts__label control">
+                    <input class="contacts__input contacts__input--input control__input" type="tel" name="phone" placeholder="Телефон" required>
                   </label>
                   <button class="contacts__form-btn app-btn" type="submit">Отправить вопрос</button>
                 </form>
@@ -477,8 +477,8 @@
                 <h3 class="contacts__subtitle">Мы на связи</h3>
 
                 <div class="contacts__list">
-                  <a class="contacts-link contacts-link--adress">Украина, г. Одесса<br>ул. Комитетская, 24Б</a>
-                  <a class="contacts-link contacts-link--email">
+                  <a class="contacts-link contacts-link--adress" href="#">Украина, г. Одесса<br>ул. Комитетская, 24Б</a>
+                  <a class="contacts-link contacts-link--email" href="#">
                     <span class="contacts-link-name">Эл.почта: </span>
                     odessadomd@gmail.com
                   </a>
@@ -492,13 +492,13 @@
                       <span class="messenger-link__name">Telegram</span>
                     </a>
                   </div>
-                  <a class="contacts__phone contacts-link contacts-link--phone">
+                  <a class="contacts__phone contacts-link contacts-link--phone" href="#">
                     +38 (098) 271-50-35
                     <span class="contacts__phone-text">Мы на связи</span>
                   </a>
                 </div>
 
-                <a class="contacts__call-btn app-btn" href="#call" data-modal="#call">Перезвонить мне</a>
+                <a class="contacts__call-btn app-btn" href="#feedback" data-modal="#feedback">Перезвонить мне</a>
               </div>
             </div>
           </div>
@@ -507,7 +507,7 @@
         <section class="calculation modal" id="calculation" aria-hidden="true" tabindex="-1">
           <div class="calculation__wrapper modal__wrapper">
             <button class="calculation__close-btn modal__close-btn">
-              <span class="visually-hidden">Закрыть меню</span>
+              <span class="visually-hidden">Закрыть окно</span>
             </button>
 
             <h2 class="calculation__title calculation__container">Укажите <b>площадь</b> и <b>материал</b> стен Вашего дома</h2>
@@ -642,6 +642,27 @@
             </form>
           </div>
         </section>
+
+        <section class="feedback modal" id="feedback" aria-hidden="true" tabindex="-1">
+          <div class="feedback__wrapper modal__wrapper">
+            <button class="feedback__close-btn modal__close-btn">
+              <span class="visually-hidden">Закрыть окно</span>
+            </button>
+
+            <h2 class="feedback__title">Заказать обратный звонок</h2>
+            <form class="feedback__form" method="post" action="#">
+              <fieldset class="feedback__group">
+                <label class="feedback__control control">
+                  <input class="feedback__input feedback__input--user control__input" type="text" id="feedback-user" name="user" placeholder="Ваше имя" pattern="/^[a-zA-Zа-яА-ЯЁё \-]+$/" required>
+                </label>
+                <label class="feedback__control control">
+                  <input class="feedback__input feedback__input--phone control__input" type="tel" id="feedback-phone" name="phone" placeholder="Ваш телефон" pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$/" required>
+                </label>
+              </fieldset>
+              <button class="feedback__submit-btn app-btn" type="submit">Перезвоните мне</button>
+            </form>
+          </div>
+        </section>
       </main>
 
       <footer class="page__footer page-footer">
@@ -688,28 +709,28 @@
           <div class="page-footer__contacts">
             <h3 class="page-footer__contacts-title">Контакты</h3>
             <div class="page-footer__contacts-list">
-              <a class="contacts-link contacts-link--adress">Украина, г. Одесса<br>ул. Комитетская, 24Б</a>
-              <a class="contacts-link contacts-link--email">
+              <a class="contacts-link contacts-link--adress" href="#">Украина, г. Одесса<br>ул. Комитетская, 24Б</a>
+              <a class="contacts-link contacts-link--email" href="#">
                 <span class="contacts-link__name">Эл.почта: </span>
                 odessadomd@gmail.com
               </a>
-              <a class="contacts-link contacts-link--phone">+38 (098) 271-50-35</a>
+              <a class="contacts-link contacts-link--phone" href="#">+38 (098) 271-50-35</a>
             </div>
           </div>
 
           <ul class="page-footer__social-list social-list">
             <li class="social-list__item">
-              <a class="social-list__link social-list__link--facebook">
+              <a class="social-list__link social-list__link--facebook" href="#">
                 <span class="visually-hidden">Facebook</span>
               </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link social-list__link--instagram">
+              <a class="social-list__link social-list__link--instagram" href="#">
                 <span class="visually-hidden">Instagram</span>
               </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link social-list__link--youtube">
+              <a class="social-list__link social-list__link--youtube" href="#">
                 <span class="visually-hidden">Youtube</span>
               </a>
               <span class="social-list__link-text">Свежие видео<br> у нас на канале</span>

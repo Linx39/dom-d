@@ -148,10 +148,7 @@
   gap: 15px;
 }
 
-.contacts__form-field {
-  display: block;
-
-  width: 100%;
+.contacts__input {
   padding: 10px;
 
   font: inherit;
@@ -175,17 +172,10 @@
   }
 }
 
-.contacts__form-field::placeholder {
+.contacts__input::placeholder {
   font: inherit;
 
   color: #00000040;
-
-  @media (min-width: @md-width) {
-  }
-
-  @media (min-width: @xl-width) {
-    font-size: 20px;
-  }
 }
 
 .contacts__form-btn {
@@ -194,6 +184,7 @@
 
 .contacts__list {
   display: grid;
+  justify-items: start;
   gap: 10px;
 
   padding-top: 3px;
