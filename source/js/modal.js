@@ -1,6 +1,6 @@
 import { isEscEvent, isTabEvent } from "./utils.js";
 import { activateBlur, deactivateBlur } from "./blur.js";
-// import { scrollUp } from "./scroll-up.js";
+import { scrollUp } from "./scroll-up.js";
 
 // const MODAL_CLASS = 'modal';
 
@@ -22,8 +22,8 @@ const MODAL_OPENED_CLASS = 'modal--opened';
 const MODAL_CLOSE_BTN = 'modal__close-btn';
 
 const body = document.querySelector('.page__body');
-// const fixedElements = [scrollUp];
-const fixedElements = null;
+const mainNav = document.querySelector('.main-nav');
+const fixedElements = [scrollUp, mainNav];
 let prevModal;
 let lastFocusElement;
 
@@ -70,7 +70,9 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
 
     document.addEventListener(`keydown`, onEscKeyDown);
     document.addEventListener(`keydown`, onTabKeyDown);
-    document.addEventListener('click', onDocumentClick);
+    // document.addEventListener('click', onDocumentClick);
+    document.addEventListener('mousedown', onMouseDown);
+    document.addEventListener('mouseup', onMouseUp);
 
     modalElement.focus();
   }
@@ -93,7 +95,9 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
 
     document.removeEventListener('keydown', onEscKeyDown);
     document.removeEventListener('keydown', onTabKeyDown);
-    document.removeEventListener('click', onDocumentClick);
+    // document.removeEventListener('click', onDocumentClick);
+    document.removeEventListener('mousedown', onMouseDown);
+    document.removeEventListener('mouseup', onMouseUp);
 
     if (lastFocusElement) {
       lastFocusElement.focus();
@@ -136,6 +140,25 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
       closeModal();
     }
   };
+
+  let isOverlayClick = false;
+
+  const onMouseDown = (evt) => {
+    console.log(evt.target);
+    console.log(modalWrapper.contains(evt.target));
+    if (modalElement.contains(evt.target) && !modalWrapper.contains(evt.target)) {
+      isOverlayClick = true;
+    }
+  }
+
+  const onMouseUp = (evt) => {
+    // console.log(evt.target);
+    if (modalElement.contains(evt.target) && !modalWrapper.contains(evt.target) && isOverlayClick) {
+      evt.preventDefault();
+      closeModal();
+      isOverlayClick = false;
+    }
+  }
 
   const onDocumentClick = (evt) => {
     if (modalElement.contains(evt.target) && !modalWrapper.contains(evt.target)) {

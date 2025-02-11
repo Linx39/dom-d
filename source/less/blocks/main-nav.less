@@ -1,5 +1,8 @@
 .main-nav {
-  position: relative;
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  right: 0;
 
   min-height: 136px;
 
@@ -21,8 +24,6 @@
 }
 
 .main-nav__top {
-  position: relative;
-
   display: grid;
   grid-template-columns: min-content min-content 1fr min-content;
   grid-template-rows: auto auto;
@@ -85,7 +86,7 @@
 
   width: 127px;
   height: 33px;
-  
+
   .focus-default();
 
   @media (min-width: @md-width) {
