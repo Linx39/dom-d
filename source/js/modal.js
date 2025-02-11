@@ -23,7 +23,7 @@ const MODAL_CLOSE_BTN = 'modal__close-btn';
 
 const body = document.querySelector('.page__body');
 const mainNav = document.querySelector('.main-nav');
-const fixedElements = [scrollUp, mainNav];
+const fixedElements = [scrollUp];
 let prevModal;
 let lastFocusElement;
 
