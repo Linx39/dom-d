@@ -1,5 +1,5 @@
 import { initModal } from "./modal.js";
 
-const feedback = document.querySelector('.feedback');
+const feedback = document.querySelector('.feedback-modal');
 
 const feedbackModal = initModal(feedback);

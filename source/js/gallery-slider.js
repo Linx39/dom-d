@@ -3,7 +3,7 @@ import { Width } from "./const.js";
 const initGallerySwiper = () => {
   const gallerySwiper = new Swiper('.gallery__cards', {
     slidesPerView: 'auto',
-    spaceBetween: 0,
+    spaceBetween: 2,
     centeredSlides: true,
 
     navigation: {

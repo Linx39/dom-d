@@ -4,8 +4,13 @@ textarea.control__input {
   display: block;
   width: 100%;
   height: 100%;
+  padding: 9px 20px;
 
   font: inherit;
+  font-size: 16px;
+  line-height: 117%;
+  font-weight: 400;
+
   color: var(--color-font-extra-dark);
   background-color: var(--color-back-light);
 
@@ -15,6 +20,16 @@ textarea.control__input {
     outline: 1px solid var(--color-accent);
     outline-offset: -1px;
   }
+}
+
+.control__input[type="text"],
+.control__input[type="tel"] {
+  min-height: 50px;
+}
+
+textarea.control__input {
+  min-height: 121px;
+  resize: none;
 }
 
 .control__input[type="text"]::placeholder,

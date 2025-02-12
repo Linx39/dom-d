@@ -1,5 +1,5 @@
 import { isEscEvent, isTabEvent } from "./utils.js";
-import { activateBlur, deactivateBlur } from "./blur.js";
+import { activateOverlay, deactivateOverlay } from "./overlay.js";
 import { scrollUp } from "./scroll-up.js";
 
 // const MODAL_CLASS = 'modal';
@@ -34,6 +34,7 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
   const modalOpenBtns = document.querySelectorAll(`[data-modal="#${id}"]`);
   const nodes = modalElement.querySelectorAll(FOCUS_ELEMENTS);
   const nodesArray = [...nodes];
+  let isOpened = false;
 
   const openModal = (evt) => {
     if(!prevModal) {
@@ -66,7 +67,7 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
     modalElement.setAttribute('tabindex', '0');
     modalElement.style.marginRight = `${scrollYWidth}px`;
 
-    activateBlur();
+    activateOverlay();
 
     document.addEventListener(`keydown`, onEscKeyDown);
     document.addEventListener(`keydown`, onTabKeyDown);
@@ -74,10 +75,16 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
     document.addEventListener('mousedown', onMouseDown);
     document.addEventListener('mouseup', onMouseUp);
 
+    isOpened = true;
+
     modalElement.focus();
   }
 
   const closeModal = () => {
+    if(!isOpened) {
+      return;
+    }
+
     body.removeAttribute('style');
 
     if (fixedElements) {
@@ -91,7 +98,7 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
     modalElement.setAttribute('tabindex', '-1');
     modalElement.style.marginRight = ``;
 
-    deactivateBlur();
+    deactivateOverlay();
 
     document.removeEventListener('keydown', onEscKeyDown);
     document.removeEventListener('keydown', onTabKeyDown);
@@ -104,6 +111,7 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
     }
 
     prevModal = null;
+    isOpened = false;
 
     if (afterClose) {
       afterClose();
@@ -168,6 +176,7 @@ const initModal = (modalElement, beforeOpen, afterClose) => {
 
   const modal = {
     element: modalElement,
+    isOpened: isOpened,
     close() {closeModal()},
     open() {evt => openModal(evt)},
   }
