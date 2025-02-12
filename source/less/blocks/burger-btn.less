@@ -1,21 +1,22 @@
 .burger-btn {
   position: relative;
 
-  @width: 22px;
-  @height: 18px;
+  width: 32px;
+  height: 32px;
 
-  width: @width;
-  height: @width;
+  border-radius: 3px;
 
-  .burger-icon(@width, @height);
-  
+  color: var(--color-font-light);
+  background-color: var(--color-back-extra-dark);
+
+  .burger-icon(22px, 18px);
+
   .focus-default();
 
   @media (min-width: @md-width) {
-    @width: 35px;
-    @height: 28px;
-    width: @width;
-    height: @width;
-    .burger-icon(@width, @height);
+    width: 48px;
+    height: 48px;
+
+    .burger-icon(35px, 28px);
   }
 }
