@@ -7,3 +7,5 @@ import './calculation-modal.js';
 import './site-menu-modal.js';
 import './site-list.js';
 import './scroll-up.js';
+import './response-modal.js';
+import './form-validation.js';

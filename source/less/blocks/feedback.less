@@ -1,47 +1,20 @@
 .feedback {
-  position: relative;
-
   width: 360px;
   padding: 60px 0 36px;
 
-  color: var(--color-back-extra-dark);
-  background-color: var(--color-back-extra-light);
-  box-shadow: 0px 0px 74px 0px #27110a14;
-
   @media (min-width: @md-width) {
+    width: 580px;
+    padding: 72px 0 42px;
+  }
+
+  @media (min-width: @xl-width) {
+    width: 650px;
+    padding: 82px 0 48px;
+  }
+
+  @media (min-width: @xxl-width) {
     width: 650px;
     padding: 94px 0 54px;
-  }
-}
-
-.feedback__wrapper {
-  padding: 0 14px;
-
-  @media (min-width: @md-width) {
-    padding: 0 112px;
-  }
-}
-
-.feedback__close-btn {
-  .cross-icon(20px, 2px);
-
-  position: absolute;
-  top: 8px;
-  right: 8px;
-
-  width: 32px;
-  height: 32px;
-
-  color: var(--color-accent);
-
-  @media (min-width: @md-width) {
-    .cross-icon(30px, 3px);
-
-    top: 12px;
-    right: 12px;
-
-    width: 40px;
-    height: 40px;
   }
 }
 
