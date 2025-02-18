@@ -8,13 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const scrollUpBtn = document.querySelector('.scroll-up__btn');
 
-  window.addEventListener('scroll', () => {
+  const handleScrollUp = () => {
     if (window.pageYOffset > SCROLL_HEIGHT) {
       scrollUp.classList.add(SCROLL_UP_SHOW_CLASS);
     } else {
       scrollUp.classList.remove(SCROLL_UP_SHOW_CLASS);
     }
-  });
+  }
+
+  window.addEventListener('DOMContentLoaded', handleScrollUp);
+  window.addEventListener('scroll', handleScrollUp);
 
   scrollUpBtn.addEventListener('click', (evt) => {
     evt.preventDefault();

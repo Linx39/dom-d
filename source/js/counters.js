@@ -15,9 +15,9 @@ const isInViewport = (elem) => {
 
 const counters = document.querySelectorAll('.js-counter');
 
-const onScroll = () => {
+const activateCounters = () => {
   if(isInViewport(countersWrapper)) {
-    window.removeEventListener('scroll', onScroll);
+    window.removeEventListener('scroll', activateCounters);
 
     counters.forEach(counter => {
       let start = +counter.innerHTML;
@@ -33,4 +33,5 @@ const onScroll = () => {
   }
 }
 
-window.addEventListener('scroll', onScroll);
+window.addEventListener('DOMContentLoaded', activateCounters);
+window.addEventListener('scroll', activateCounters);

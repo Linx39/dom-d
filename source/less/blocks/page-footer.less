@@ -7,7 +7,7 @@
 
   @media (min-width: @md-width) {
     padding-top: 82px;
-    padding-bottom: 77px;
+    padding-bottom: 64px;
   }
 
   @media (min-width: @xl-width) {
@@ -17,7 +17,7 @@
 
   @media (min-width: @xxl-width) {
     padding-top: 75px;
-    padding-bottom: 85px;
+    padding-bottom: 78px;
   }
 }
 
@@ -25,7 +25,7 @@
   position: relative;
 
   display: grid;
-  gap: 26px;
+  gap: 20px;
 
   padding-left: 46px;
   padding-right: 46px;
@@ -70,10 +70,17 @@
   }
 }
 
+.page-footer__logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
 .page-footer__site-list {
   position: relative;
 
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 
   &::after {
     position: absolute;
@@ -98,18 +105,7 @@
     }
   }
 
-  @media (min-width: @xl-width) {
-    display: grid;
-    grid-template-columns: max-content max-content;
-    grid-template-rows: min-content min-content min-content 1fr;
-    grid-auto-rows: min-content;
-    gap: 37px 32px;
-  }
-
   @media (min-width: @xxl-width) {
-    grid-column: 1 / 2;
-    gap: 37px 78px;
-
     margin-left: 18px;
   }
 }
@@ -130,9 +126,15 @@
 .page-footer__contacts {
   display: flex;
   flex-direction: column;
+  margin-top: 7px;
 
+  @media (min-width: @md-width) {
+    margin-top: 0
+    ;
+  }
   @media (min-width: @xl-width) {
     min-width: 340px;
+    margin-top: 0;
   }
 }
 
@@ -153,9 +155,13 @@
 }
 
 .page-footer__social-list {
+  margin-top: 6px;
+
   @media (min-width: @md-width) {
     grid-column: -2 / -1;
     grid-row: -2 / -1;
+
+    margin-top: 0;
   }
 
   @media (min-width: @xxl-width) {

@@ -9,4 +9,4 @@ import './site-list.js';
 import './scroll-up.js';
 import './response-modal.js';
 import './form-validation.js';
-import './counter.js';
+import './counters.js';

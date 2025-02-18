@@ -5,6 +5,8 @@ const initGallerySwiper = () => {
     slidesPerView: 'auto',
     spaceBetween: 2,
     centeredSlides: true,
+    watchSlidesProgress: true,
+    slideFullyVisibleClass: 'gallery__item--visible',
 
     navigation: {
       prevEl: '.gallery__navigation-btn--prev',

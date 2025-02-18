@@ -19,7 +19,7 @@
 }
 
 .gallery__title {
-  margin-bottom: 38px;
+  margin-bottom: 37px;
 
   text-wrap: balance;
 
@@ -90,8 +90,9 @@
   transition: transform .5s;
 }
 
-.gallery__img:hover img,
-.gallery__img:focus-visible img {
+.gallery__item:hover .gallery__img img,
+.gallery__item:focus-visible .gallery__img img,
+.gallery__item--visible .gallery__img img {
   transform: scale(1.1);
 }
 
