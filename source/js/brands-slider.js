@@ -12,9 +12,6 @@ const initBrandsSwiper = () => {
     },
 
     breakpoints: {
-      [Width.SM]: {
-        spaceBetween: 25,
-      },
       [Width.MD]: {
         spaceBetween: 25,
       },
@@ -34,28 +31,3 @@ const initBrandsSwiper = () => {
 };
 
 initBrandsSwiper();
-
-// let isBrandsSwiperInit = false;
-// let brandsSwiper = Swiper;
-
-// const setBrandsSwiperMode = () => {
-//   const isTabletWidth = window.matchMedia(`(min-width: ${Width.MD}px)`).matches;
-
-//   if (!isTabletWidth && !isBrandsSwiperInit){
-//     brandsSwiper = initBrandsSwiper();
-//     isBrandsSwiperInit = true;
-//   }
-
-//   if (isTabletWidth && isBrandsSwiperInit) {
-//     brandsSwiper.destroy();
-//     isBrandsSwiperInit = false;
-//   }
-// };
-
-// window.addEventListener("DOMContentLoaded", () => {
-//   setBrandsSwiperMode();
-// });
-
-// window.addEventListener("resize", () => {
-//   setBrandsSwiperMode();
-// });

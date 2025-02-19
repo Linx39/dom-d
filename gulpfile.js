@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sourcemap from 'gulp-sourcemaps';
 import less from 'gulp-less';
+import cleancss from 'gulp-clean-css';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
@@ -31,6 +32,7 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
+    .pipe(cleancss())
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -67,8 +69,7 @@ export const scripts = () => {
 
 export const optimizeImages = () => {
   return gulp.src([
-    `${SOURCE_FOLDER}/images/**/*.svg`,
-    `!${SOURCE_FOLDER}/images/sprite/*`
+    `${SOURCE_FOLDER}/images/**/*.svg`
   ])
     .pipe(imagemin())
     .pipe(gulp.dest(`${PUBLIC_FOLDER}/images`));
@@ -81,14 +82,6 @@ export const copyImages = () => {
   ])
     .pipe(gulp.dest(`${PUBLIC_FOLDER}/images`));
 }
-
-// export const copyImages = () => {
-//   return gulp.src([
-//     `${SOURCE_FOLDER}/images/**/*.{png,jpg,svg}`,
-//     `!${SOURCE_FOLDER}/images/sprite/*`
-//   ])
-//     .pipe(gulp.dest(`${PUBLIC_FOLDER}/images`));
-// }
 
 export const createWebp = () => {
   return gulp.src([

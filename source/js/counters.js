@@ -1,9 +1,10 @@
 const DURATION = 1000;
 
 const countersWrapper = document.querySelector('.js-counters-wrapper');
+const counters = document.querySelectorAll('.js-counter');
 
-const isInViewport = (elem) => {
-  const distance = elem.getBoundingClientRect();
+const isInViewport = (element) => {
+  const distance = element.getBoundingClientRect();
 
   return (
       distance.top >= 0 &&
@@ -12,8 +13,6 @@ const isInViewport = (elem) => {
       distance.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 };
-
-const counters = document.querySelectorAll('.js-counter');
 
 const activateCounters = () => {
   if(isInViewport(countersWrapper)) {
@@ -31,7 +30,7 @@ const activateCounters = () => {
       }, DURATION / end );
     })
   }
-}
+};
 
 window.addEventListener('DOMContentLoaded', activateCounters);
 window.addEventListener('scroll', activateCounters);

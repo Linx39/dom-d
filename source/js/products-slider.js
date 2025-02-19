@@ -1,4 +1,4 @@
-import { Width } from "./const.js";
+import { hadleSwiperMode } from "./swiper-mode.js";
 
 const initProductsSwiper = () => {
   const productsSwiper = new Swiper('.products__cards', {
@@ -18,27 +18,4 @@ const initProductsSwiper = () => {
   return productsSwiper;
 };
 
-let isProductsSwiperInit = false;
-let productsSwiper = Swiper;
-
-const setProductsSwiperMode = () => {
-  const isTabletWidth = window.matchMedia(`(min-width: ${Width.MD}px)`).matches;
-
-  if (!isTabletWidth && !isProductsSwiperInit){
-    productsSwiper = initProductsSwiper();
-    isProductsSwiperInit = true;
-  }
-
-  if (isTabletWidth && isProductsSwiperInit) {
-    productsSwiper.destroy();
-    isProductsSwiperInit = false;
-  }
-};
-
-window.addEventListener("DOMContentLoaded", () => {
-  setProductsSwiperMode();
-});
-
-window.addEventListener("resize", () => {
-  setProductsSwiperMode();
-});
+hadleSwiperMode(initProductsSwiper);

@@ -1,3 +1,4 @@
+import './swiper-mode.js';
 import './products-slider.js';
 import './gallery-slider.js';
 import './about-slider.js';
