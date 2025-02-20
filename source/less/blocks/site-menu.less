@@ -9,6 +9,10 @@
   background-color: #ffffffde;
   backdrop-filter: blur(16px);
 
+  @-moz-document url-prefix() {
+    background-color: #eeeeee;
+  }
+
   @media (min-width: @md-width) {
     width: 503px;
     padding: 35px 0 76px;
@@ -36,14 +40,13 @@
   .cross-icon(28px, 3px);
 
   position: absolute;
+  left: 6px;
+  top: 22px;
 
   width: 32px;
   height: 32px;
 
   .focus-default();
-
-  left: 6px;
-  top: 22px;
 
   @media (min-width: @md-width) {
     .cross-icon(42px, 3px);

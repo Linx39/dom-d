@@ -36,8 +36,6 @@
   width: 40px;
   height: 40px;
 
-  border-radius: 50%;
-
   .focus-default();
 
   &::before {
@@ -47,23 +45,24 @@
 
     background-repeat: no-repeat;
     background-position: center;
+
+    border-radius: 50%;
   }
 
   &--facebook {
-    background-color: #3b5998;
-
     &::before {
+      background-color: #3b5998;
       background-image: url("../images/icons/facebook.svg");
       background-size: 13px 27px;
     }
   }
 
   &--instagram {
-    background: linear-gradient(43.94deg, #eea054 16.16%, #d64763 50.11%, #b62a99 83.68%);
-
     &::before {
-      background-image: url("../images/icons/instagram.svg");
-      background-size: 17px 17px;
+      background-image:
+        url("../images/icons/instagram.svg"),
+        linear-gradient(43.94deg, #eea054 16.16%, #d64763 50.11%, #b62a99 83.68%);
+      background-size: 17px 17px, 100% 100%;
     }
   }
 
