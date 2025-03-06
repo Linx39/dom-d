@@ -1,0 +1,150 @@
+.product-leadmagnet {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @media (min-width: @md-width) {
+    padding-top: 100px;
+    padding-bottom: 98px;
+  }
+
+  @media (min-width: @xl-width) {
+    padding-top: 51px;
+    padding-bottom: 99px;
+  }
+
+  @media (min-width: @xxl-width) {
+    padding-top: 72px;
+    padding-bottom: 160px;
+  }
+}
+
+.product-leadmagnet__wrapper {
+}
+
+.product-leadmagnet__content {
+  position: relative;
+
+  max-width: var(--mobile-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 70px 20px 314px;
+
+  background-color: var(--color-accent);
+  background-image: url("../../images/product-leadmagnet/product-leadmagnet-mobile.webp");
+  background-size: 323px 232px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  box-shadow: 0 0 74px 0 #27110a29;
+
+  &::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+
+    width: 102px;
+    height: 297px;
+
+    background-image: url("../../images/product-leadmagnet/product-leadmagnet-decor-mobile.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 58px;
+
+    background: linear-gradient(180deg, rgba(221, 160, 70, 0) 0%, #dda046 100%);
+  }
+
+  @media (min-width: @md-width) {
+    max-width: var(--tablet-width);
+    padding: 90px 71px 432px;
+
+    background-image: url("../../images/product-leadmagnet/product-leadmagnet-tablet.webp");
+    background-size: 506px 327px;
+    background-position: right 99px bottom;
+
+    &::before {
+      width: 294px;
+      height: 417px;
+
+      background-image: url("../../images/product-leadmagnet/product-leadmagnet-decor-tablet.webp");
+    }
+
+    &::after {
+      height: 95px;
+    }
+  }
+
+  @media (min-width: @xl-width) {
+    max-width: unset;
+    margin-top: 49px;
+    // padding: 65px 637px 63px 64px;
+    padding: 65px 60% 63px 64px;
+
+    &::after {
+      // width: 637px;
+      width: 60%;
+    }
+  }
+
+  @media (min-width: @xxl-width) {
+    padding: 117px 644px 73px 110px;
+
+    &::after {
+      width: 831px;
+    }
+  }
+}
+
+.product-leadmagnet__title {
+  margin-bottom: 15px;
+
+  font-weight: 900;
+  text-align: left;
+
+  @media (min-width: @md-width) {
+    margin-bottom: 13px;
+
+    font-size: 32px;
+  }
+
+  @media (min-width: @xl-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @xl-width) {
+    margin-bottom: 13px;
+  }
+}
+
+.product-leadmagnet__text {
+  margin-bottom: 25px;
+  margin-right: 42px;
+
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 400;
+
+  @media (min-width: @md-width) {
+    margin-bottom: 28px;
+    margin-right: 71px;
+  }
+
+  @media (min-width: @xl-width) {
+    margin-bottom: 24px;
+    margin-right: 0;
+  }
+
+  @media (min-width: @xl-width) {
+    margin-bottom: 28px;
+  }
+}

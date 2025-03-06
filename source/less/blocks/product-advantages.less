@@ -1,0 +1,258 @@
+.product-advantages {
+  padding-top: 70px;
+
+  @media (min-width: @md-width) {
+    padding-top: 99px;
+  }
+
+  @media (min-width: @xl-width) {
+    padding-top: 100px;
+  }
+
+  @media (min-width: @xxl-width) {
+    padding-top: 161px;
+  }
+}
+
+.product-advantages__wrapper {
+  @media (min-width: @xl-width) {
+    padding-left: 246px;
+    padding-right: 246px;
+  }
+
+  @media (min-width: @xxl-width) {
+   .wrapper-padding();
+  }
+
+}
+
+.product-advantages__title {
+  margin-bottom: 24px;
+  margin-right: 0;
+
+  font-weight: 700;
+  text-align: right;
+
+  @media (min-width: @md-width) {
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: @xl-width) {
+    margin-bottom: 31px;
+
+    text-align: center;
+  }
+
+  @media (min-width: @xxl-width) {
+    text-align: right;
+  }
+}
+
+.product-advantages__text {
+  margin-bottom: 26px;
+
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 400;
+  text-align: right;
+
+  @media (min-width: @md-width) {
+    margin-bottom: 50px;
+
+    text-wrap: balance;
+  }
+
+  @media (min-width: @xl-width) {
+    max-width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 53px;
+
+    text-align: center;
+    text-wrap: auto;
+  }
+
+  @media (min-width: @xxl-width) {
+    margin-right: 0;
+    margin-bottom: 64px;
+
+    text-align: right;
+  }
+}
+
+.product-advantages__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 11px 8px;
+
+  @media (min-width: @md-width) {
+    gap: 23px 18px;
+  }
+
+  @media (min-width: @xl-width) {
+    gap: 20px;
+  }
+
+  @media (min-width: @xxl-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 26px 20px;
+  }
+}
+
+.product-advantages__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  min-height: 103px;
+  padding: 10px 15px 10px 18px;
+
+  background-color: var(--color-white-99);
+  border-top: 1px solid var(--color-accent);
+  box-shadow: 0 0 74px 0 #27110a29;
+
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 11px;
+    right: 11px;
+
+    background-color: var(--color-accent);
+
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &--speed::before  {
+    width: 25px;
+    height: 25px;
+
+    mask-image: url("../../images/icons/bank.svg");
+  }
+
+  &--price::before  {
+    width: 26px;
+    height: 26px;
+
+    mask-image: url("../../images/icons/growth.svg");
+  }
+
+  &--design::before  {
+    width: 27px;
+    height: 27px;
+
+    mask-image: url("../../images/icons/bio.svg");
+  }
+
+  @media (min-width: @md-width) {
+    justify-content: end;
+    gap: 10px;
+
+    min-height: 219px;
+    padding: 30px 44px 30px 37px;
+
+    &::before {
+      top: 33px;
+      right: 33px;
+    }
+
+    &--speed::before  {
+      width: 53px;
+      height: 53px;
+    }
+
+    &--price::before  {
+      width: 55px;
+      height: 55px;
+    }
+
+    &--design::before  {
+      width: 57px;
+      height: 57px;
+    }
+  }
+
+  @media (min-width: @xl-width) {
+    gap: 23px;
+
+    min-height: 270px;
+    padding: 49px 102px 49px 46px;
+
+    &::before {
+      top: 41px;
+      right: 40px;
+    }
+
+    &--speed::before  {
+      width: 65px;
+      height: 65px;
+    }
+
+    &--price::before  {
+      width: 67px;
+      height: 67px;
+    }
+
+    &--design::before  {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+}
+
+.product-advantages__item-number {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 700;
+  color: var(--color-accent);
+
+  @media (min-width: @md-width) {
+    font-size: 24px;
+  }
+
+  @media (min-width: @xl-width) {
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+}
+
+.product-advantages__item-text {
+  font-size: 16px;
+  line-height: 110%;
+  font-weight: 500;
+
+  @media (min-width: @md-width) {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  @media (min-width: @xl-width) {
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+}
+
+.product-advantages__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @media (min-width: @md-width) {
+  }
+
+  @media (min-width: @xl-width) {
+  }
+
+  @media (min-width: @xxl-width) {
+  }
+}

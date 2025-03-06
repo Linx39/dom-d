@@ -1,0 +1,238 @@
+.product-intro {
+  position: relative;
+
+  padding-top: 59px;
+  padding-bottom: 56px;
+
+  color: var(--color-font-light);
+  background-color: var(--color-back-dark-02);
+  background-image: url("../images/product-intro/product-intro-mobile.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+
+    background: linear-gradient(267.54deg, rgba(16, 16, 16, 0.76) 0%, rgba(16, 16, 16, 0.31) 53.62%, rgba(12, 12, 12, 0.87) 100.82%);
+  }
+
+  @media (min-width: @md-width) {
+    padding-top: 96px;
+    padding-bottom: 68px;
+
+    background-image: url("../images/product-intro/product-intro-tablet.webp");
+  }
+
+  @media (min-width: @xl-width) {
+    padding-bottom: 66px;
+
+    background-image: url("../images/product-intro/product-intro-laptop.webp");
+  }
+
+  @media (min-width: @xxl-width) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+    background-image: url("../images/product-intro/product-intro-desktop.webp");
+  }
+}
+
+.product-intro__wrapper {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+
+  @media (min-width: @md-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product-intro__title {
+  position: relative;
+
+  margin-bottom: 9px;
+  padding-left: 33px;
+
+  font-size: 48px;
+  line-height: 117%;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  & span {
+    color: var(--color-accent);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 19px;
+    left: 0;
+
+    width: 19px;
+    height: 19px;
+
+    background-color: var(--color-font-light);
+    border-radius: 50%;
+  }
+
+  @media (min-width: @md-width) {
+    grid-column: 1 / -1;
+
+    margin-bottom: 18px;
+    padding-left: 38px;
+
+    font-size: 60px;
+
+    &::before {
+      top: 22px;
+    }
+  }
+
+  @media (min-width: @xxl-width) {
+    grid-column: 1 / 2;
+  }
+
+}
+
+.product-intro__text {
+  margin-left: 33px;
+  margin-bottom: 19px;
+
+  font-size: 24px;
+  line-height: 117%;
+  font-weight: 700;
+
+  text-shadow: 0 0 28px var(--color-black-01);
+
+  @media (min-width: @md-width) {
+    grid-column: 1 / -1;
+
+    margin-bottom: 17px;
+    margin-left: 45px;
+  }
+
+  @media (min-width: @xl-width) {
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: @xxl-width) {
+    grid-column: 1 / 2;
+
+    margin-bottom: 46px;
+  }
+
+}
+
+.product-intro__btn {
+  margin-left: 33px;
+  margin-bottom: 23px;
+
+  @media (min-width: @md-width) {
+    grid-column: 1 / 2;
+    align-self: center;
+
+    margin-bottom: 0;
+    margin-left: 45px;
+  }
+}
+
+.product-intro__video {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+
+  margin-left: 33px;
+
+  @media (min-width: @md-width) {
+    grid-column: 2 / -1;
+    justify-self: end;
+    margin-left: 0;
+  }
+
+  @media (min-width: @xxl-width) {
+    grid-column: 2 / -1;
+    grid-row: 1 / 4;
+  }
+}
+
+.product-intro__video-link {
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 67px;
+  height: 67px;
+
+  background-image: url("../images/icons/youtube.svg");
+  background-size: 52px 52px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .focus-default();
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+
+    margin: auto;
+  }
+
+  &::before {
+    width: 67px;
+    height: 67px;
+
+    border-radius: 50%;
+    border: 1px solid var(--color-accent);
+  }
+
+  &::after {
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+    border: 1px solid var(--color-accent);
+  }
+
+  @media (min-width: @md-width) {
+    width: 102px;
+    height: 102px;
+
+    background-size: 78px 78px;
+
+    &::before {
+      width: 102px;
+      height: 102px;
+    }
+
+    &::after {
+      width: 84px;
+      height: 84px;
+    }
+  }
+}
+
+.product-intro__video-name {
+  max-width: 230px;
+
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 400;
+
+  @media (min-width: @md-width) {
+    max-width: 260px;
+
+    font-size: 18px;
+  }
+
+  @media (min-width: @xl-width) {
+    max-width: 290px;
+
+    font-size: 24px;
+  }
+}
