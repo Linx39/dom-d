@@ -1,4 +1,4 @@
-import { Width } from "./const.js";
+import { handleSwiperMode } from "./swiper-mode.js";
 
 const initAboutSwiper = () => {
   const aboutSwiper = new Swiper('.about__cards', {
@@ -16,27 +16,4 @@ const initAboutSwiper = () => {
   return aboutSwiper;
 };
 
-let isAboutSwiperInit = false;
-let aboutSwiper = Swiper;
-
-const setAboutSwiperMode = () => {
-  const isTabletWidth = window.matchMedia(`(min-width: ${Width.MD}px)`).matches;
-
-  if (!isTabletWidth && !isAboutSwiperInit){
-    aboutSwiper = initAboutSwiper();
-    isAboutSwiperInit = true;
-  }
-
-  if (isTabletWidth && isAboutSwiperInit) {
-    aboutSwiper.destroy();
-    isAboutSwiperInit = false;
-  }
-};
-
-window.addEventListener("DOMContentLoaded", () => {
-  setAboutSwiperMode();
-});
-
-window.addEventListener("resize", () => {
-  setAboutSwiperMode();
-});
+handleSwiperMode(initAboutSwiper);

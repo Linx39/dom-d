@@ -16,60 +16,57 @@
 
 .product-finishing__wrapper {
   display: grid;
+  row-gap: 26px;
+
+  @media (min-width: @md-width) {
+    row-gap: 29px;
+  }
 
   @media (min-width: @xl-width) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 50%;
+    column-gap: 58px;
   }
 
   @media (min-width: @xxl-width) {
     grid-template-columns: 1fr 55.5%;
+    row-gap: 25px;
+    column-gap: 115px;
   }
 }
 
 .product-finishing__title {
-  margin-bottom: 31px;
+  margin-bottom: 5px;
 
-  font-weight: 700;
   text-align: left;
 
   @media (min-width: @md-width) {
-    margin-bottom: 33px;
+    margin-bottom: 4px;
   }
 
   @media (min-width: @xl-width) {
     grid-column: 1 / 2;
-
-    margin-right: 56px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @xxl-width) {
     margin-top: 70px;
-    margin-bottom: 31px;
-    margin-right: 115px;
+    margin-bottom: 6px;
   }
 }
 
 .product-finishing__text {
-  margin-bottom: 26px;
-
   font-size: 18px;
   line-height: 150%;
   font-weight: 400;
 
   @media (min-width: @md-width) {
-    margin-bottom: 29px;
-    margin-right: 56px;
+    margin-right: 60px;
   }
 
   @media (min-width: @xl-width) {
     grid-column: 1 / 2;
 
-    margin-bottom: 27px;
-  }
-
-  @media (min-width: @xxl-width) {
-    margin-right: 115px;
-    margin-bottom: 25px;
+    margin-right: 0;
   }
 }
 
@@ -78,7 +75,7 @@
 
   width: 100%;
   max-width: var(--mobile-width);
-  margin-bottom: 31px;
+  margin-bottom: 5px;
   margin-right: auto;
   margin-left: auto;
 
@@ -122,6 +119,7 @@
 
   @media (min-width: @md-width) {
     max-width: var(--tablet-width);
+    margin-bottom: 2px;
     aspect-ratio: 708 / 695;
 
     background-image: url("../images/product-finishing/product-finishing-big-tablet.webp");
@@ -142,9 +140,7 @@
     align-self: center;
 
     max-width: unset;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
+    margin: 0;
     aspect-ratio: 530 / 520;
 
     background-image: url("../images/product-finishing/product-finishing-big-laptop.webp");
@@ -180,7 +176,7 @@
 }
 
 .product-finishing__btn {
-  margin-top: 3px;
+  margin-top: 2px;
 
   @media (min-width: @md-width) {
     margin-top: 23px;
@@ -190,11 +186,10 @@
     grid-column: 1 / 2;
     align-self: end;
 
-    margin-top: 17px;
+    margin-top: 16px;
   }
 
   @media (min-width: @xxl-width) {
-    margin-top: 17px;
-    margin-bottom: 35px;
+    margin-bottom: 36px;
   }
 }

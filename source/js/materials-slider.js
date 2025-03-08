@@ -1,4 +1,4 @@
-import { hadleSwiperMode } from "./swiper-mode.js";
+import { handleSwiperMode } from "./swiper-mode.js";
 
 const initMaterialsSwiper = () => {
   const materialsSwiper = new Swiper('.calculation__materials-group', {
@@ -14,4 +14,4 @@ const initMaterialsSwiper = () => {
   return materialsSwiper;
 };
 
-hadleSwiperMode(initMaterialsSwiper);
+handleSwiperMode(initMaterialsSwiper);

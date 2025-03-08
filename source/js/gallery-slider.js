@@ -1,4 +1,4 @@
-import { hadleSwiperMode } from "./swiper-mode.js";
+import { handleSwiperMode } from "./swiper-mode.js";
 
 const initGallerySwiper = () => {
   const gallerySwiper = new Swiper('.gallery__cards', {
@@ -18,4 +18,4 @@ const initGallerySwiper = () => {
   return gallerySwiper;
 };
 
-hadleSwiperMode(initGallerySwiper);
+handleSwiperMode(initGallerySwiper);

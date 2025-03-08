@@ -1,6 +1,6 @@
 import { Width } from "./const.js";
 
-export const hadleSwiperMode = (initSwiper) => {
+export const handleSwiperMode = (initSwiper) => {
   let isSwiperInit = false;
   let swiper = Swiper;
 

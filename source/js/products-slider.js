@@ -1,7 +1,9 @@
-import { hadleSwiperMode } from "./swiper-mode.js";
+import { handleSwiperMode } from "./swiper-mode.js";
+
+const productsCardsClass = '.products__cards';
 
 const initProductsSwiper = () => {
-  const productsSwiper = new Swiper('.products__cards', {
+  const productsSwiper = new Swiper(productsCardsClass, {
     slidesPerView: 'auto',
     spaceBetween: 30,
     centeredSlides: true,
@@ -18,4 +20,4 @@ const initProductsSwiper = () => {
   return productsSwiper;
 };
 
-hadleSwiperMode(initProductsSwiper);
+handleSwiperMode(initProductsSwiper);
