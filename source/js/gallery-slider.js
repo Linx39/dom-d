@@ -20,9 +20,6 @@ const initGallerySwiper = () => {
   return gallerySwiper;
 };
 
-// handleSwiperMode(initGallerySwiper);
-
-
 if (document.querySelector(`.${GALLERY_CARDS_CLASS}`)) {
   handleSwiperMode(initGallerySwiper);
 }

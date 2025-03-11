@@ -16,9 +16,6 @@ const initMaterialsSwiper = () => {
   return materialsSwiper;
 };
 
-// handleSwiperMode(initMaterialsSwiper);
-
-
 if (document.querySelector(`.${CALCULATION_MATERIALS_GROUP_CLASS}`)) {
   handleSwiperMode(initMaterialsSwiper);
 }

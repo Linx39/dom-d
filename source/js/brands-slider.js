@@ -6,6 +6,11 @@ const initBrandsSwiper = () => {
   const brandsSwiper = new Swiper(`.${BRANDS_CARDS_CLASS}`, {
     slidesPerView: 'auto',
     spaceBetween: 25,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      pauseOnMouseEnter: true,
+    },
 
     navigation: {
       prevEl: '.brands__navigation-btn--prev',
@@ -31,8 +36,6 @@ const initBrandsSwiper = () => {
 
   return brandsSwiper;
 };
-
-// initBrandsSwiper();
 
 if (document.querySelector(`.${BRANDS_CARDS_CLASS}`)) {
   initBrandsSwiper();
