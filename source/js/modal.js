@@ -17,17 +17,16 @@ const FOCUS_ELEMENTS = [
 ];
 const MODAL_WRAPPER_CLASS ='modal__wrapper';
 const MODAL_OPENED_CLASS = 'modal--opened';
-const MODAL_CLOSE_BTN = 'modal__close-btn';
+const MODAL_CLOSE_BTN_CLASS = 'modal__close-btn';
 
 const body = document.querySelector('.page__body');
-const mainNav = document.querySelector('.main-nav');
 const fixedElements = [scrollUp];
 let prevModal;
 let lastFocusElement;
 
 const initModal = (modalElement, beforeOpen, afterClose) => {
   const modalWrapper = modalElement.querySelector(`.${MODAL_WRAPPER_CLASS}`);
-  const modalCloseBtns = modalElement.querySelectorAll(`.${MODAL_CLOSE_BTN}`);
+  const modalCloseBtns = modalElement.querySelectorAll(`.${MODAL_CLOSE_BTN_CLASS}`);
   const id = modalElement.getAttribute('id');
   const modalOpenBtns = document.querySelectorAll(`[data-modal="#${id}"]`);
   const nodes = modalElement.querySelectorAll(FOCUS_ELEMENTS);

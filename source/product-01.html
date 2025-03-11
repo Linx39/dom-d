@@ -66,8 +66,8 @@
 
                 <ul class="site-menu__site-list site-list">
                   <li class="site-list__item">
-                    <span class="site-list__item-name">Виды строительства</span>
-                    <ul class="site-list__sublist">
+                    <button class="site-list__btn js-submenu-btn" type="button">Виды строительства</button>
+                    <ul class="site-list__sublist site-list__sublist--closed js-submenu">
                       <li class="site-list__subitem">
                         <a class="site-list__sublink" href="product-01.html">- Каркасные дома</a>
                       </li>
@@ -88,9 +88,17 @@
                       </li>
                     </ul>
                   </li>
+                  <li class="site-list__item">
+                    <a class="site-list__link js-menu-link" href="index.html#gallery">Наши работы</a>
                   </li>
                   <li class="site-list__item">
-                    <a class="site-list__link" href="#contacts">Контакты</a>
+                    <a class="site-list__link js-menu-link" href="index.html#about">О нас</a>
+                  </li>
+                  <li class="site-list__item">
+                    <a class="site-list__link js-menu-link" href="index.html#brands">Партнеры</a>
+                  </li>
+                  <li class="site-list__item">
+                    <a class="site-list__link js-menu-link" href="#contacts">Контакты</a>
                   </li>
                 </ul>
               </div>
@@ -192,7 +200,7 @@
             <p class="product-finishing__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="product-finishing__img"></div>
             <p class="product-finishing__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            <a class="product-finishing__btn app-btn" href="#calculation" data-modal="#call">Перезвонить мне</a>
+            <a class="product-finishing__btn app-btn" href="#feedback" data-modal="#feedback">Перезвонить мне</a>
           </div>
         </section>
 
@@ -257,7 +265,7 @@
           </div>
         </section>
 
-        <section class="calculation-modal modal" id="calculation" aria-hidden="true" tabindex="-1">
+        <section class="modal" id="calculation" aria-hidden="true" tabindex="-1">
           <div class="calculation popup modal__wrapper" role="dialog" aria-modal="true">
               <button class="calculation__close-btn popup__close-btn modal__close-btn">
                 <span class="visually-hidden">Закрыть окно</span>
@@ -396,7 +404,7 @@
           </div>
         </section>
 
-        <section class="feedback-modal modal" id="feedback" aria-hidden="true" tabindex="-1">
+        <section class="modal" id="feedback" aria-hidden="true" tabindex="-1">
           <div class="feedback popup modal__wrapper" role="dialog" aria-modal="true">
             <div class="popup__wrapper">
               <button class="feedback__close-btn popup__close-btn modal__close-btn">
@@ -419,7 +427,7 @@
           </div>
         </section>
 
-        <div class="response-modal modal" id="response" aria-hidden="true" tabindex="-1">
+        <div class="modal" id="response" aria-hidden="true" tabindex="-1">
           <div class="response popup modal__wrapper" role="dialog" aria-modal="true">
             <div class="popup__wrapper">
               <button class="response__close-btn popup__close-btn modal__close-btn" type="button"><span class="visually-hidden">Закрыть окно</span></button>
@@ -439,36 +447,36 @@
 
           <ul class="page-footer__site-list site-list site-list--footer ">
             <li class="site-list__item">
-              <a class="site-list__link" href="#products">Виды&nbsp;строительства</a>
+              <span class="site-list__span">Виды&nbsp;строительства</span>
               <ul class="site-list__sublist">
                 <li class="site-list__subitem">
-                  <a class="site-list__sublink" href="#">- Каркасные дома</a>
+                  <a class="site-list__sublink" href="product-01.html">- Каркасные дома</a>
                 </li>
                 <li class="site-list__subitem">
-                  <a class="site-list__sublink" href="#">- Дома из клеёного бруса</a>
+                  <a class="site-list__sublink" href="product-01.html">- Дома из клеёного бруса</a>
                 </li>
                 <li class="site-list__subitem">
-                  <a class="site-list__sublink" href="#">- Фахверковые дома</a>
+                  <a class="site-list__sublink" href="product-01.html">- Фахверковые дома</a>
                 </li>
                 <li class="site-list__subitem">
-                  <a class="site-list__sublink" href="#">- Дома из брёвен</a>
+                  <a class="site-list__sublink" href="product-01.html">- Дома из брёвен</a>
                 </li>
                 <li class="site-list__subitem">
-                  <a class="site-list__sublink" href="#">- Беседки</a>
+                  <a class="site-list__sublink" href="product-01.html">- Беседки</a>
                 </li>
                 <li class="site-list__subitem">
-                  <a class="site-list__sublink" href="#">- Ремонт и отделка</a>
+                  <a class="site-list__sublink" href="product-01.html">- Ремонт и отделка</a>
                 </li>
               </ul>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#product-info">Наши работы</a>
+              <a class="site-list__link js-menu-link" href="index.html#gallery">Наши работы</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#about">О нас</a>
+              <a class="site-list__link js-menu-link" href="index.html#about">О нас</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#brands">Партнеры</a>
+              <a class="site-list__link js-menu-link" href="index.html#brands">Партнеры</a>
             </li>
           </ul>
 

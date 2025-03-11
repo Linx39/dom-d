@@ -68,8 +68,8 @@
 
                 <ul class="site-menu__site-list site-list">
                   <li class="site-list__item">
-                    <a class="site-list__link" href="#products">Виды строительства</a>
-                    <ul class="site-list__sublist">
+                    <button class="site-list__btn js-submenu-btn" type="button">Виды строительства</button>
+                    <ul class="site-list__sublist site-list__sublist--closed js-submenu">
                       <li class="site-list__subitem">
                         <a class="site-list__sublink" href="product-01.html">- Каркасные дома</a>
                       </li>
@@ -91,16 +91,16 @@
                     </ul>
                   </li>
                   <li class="site-list__item">
-                    <a class="site-list__link" href="#gallery">Наши работы</a>
+                    <a class="site-list__link js-menu-link" href="#gallery">Наши работы</a>
                   </li>
                   <li class="site-list__item">
-                    <a class="site-list__link" href="#about">О нас</a>
+                    <a class="site-list__link js-menu-link" href="#about">О нас</a>
                   </li>
                   <li class="site-list__item">
-                    <a class="site-list__link" href="#brands">Партнеры</a>
+                    <a class="site-list__link js-menu-link" href="#brands">Партнеры</a>
                   </li>
                   <li class="site-list__item">
-                    <a class="site-list__link" href="#contacts">Контакты</a>
+                    <a class="site-list__link js-menu-link" href="#contacts">Контакты</a>
                   </li>
                 </ul>
               </div>
@@ -509,7 +509,7 @@
           </div>
         </section>
 
-        <section class="calculation-modal modal" id="calculation" aria-hidden="true" tabindex="-1">
+        <section class="modal" id="calculation" aria-hidden="true" tabindex="-1">
           <div class="calculation popup modal__wrapper" role="dialog" aria-modal="true">
               <button class="calculation__close-btn popup__close-btn modal__close-btn">
                 <span class="visually-hidden">Закрыть окно</span>
@@ -648,7 +648,7 @@
           </div>
         </section>
 
-        <section class="feedback-modal modal" id="feedback" aria-hidden="true" tabindex="-1">
+        <section class="modal" id="feedback" aria-hidden="true" tabindex="-1">
           <div class="feedback popup modal__wrapper" role="dialog" aria-modal="true">
             <div class="popup__wrapper">
               <button class="feedback__close-btn popup__close-btn modal__close-btn">
@@ -671,7 +671,7 @@
           </div>
         </section>
 
-        <div class="response-modal modal" id="response" aria-hidden="true" tabindex="-1">
+        <div class="modal" id="response" aria-hidden="true" tabindex="-1">
           <div class="response popup modal__wrapper" role="dialog" aria-modal="true">
             <div class="popup__wrapper">
               <button class="response__close-btn popup__close-btn modal__close-btn" type="button"><span class="visually-hidden">Закрыть окно</span></button>
@@ -691,36 +691,36 @@
 
           <ul class="page-footer__site-list site-list site-list--footer ">
             <li class="site-list__item">
-              <a class="site-list__link" href="#products">Виды&nbsp;строительства</a>
+              <span class="site-list__span">Виды&nbsp;строительства</span>
               <ul class="site-list__sublist">
                 <li class="site-list__subitem">
-                  <a class="site-list__sublink" href="#">- Каркасные дома</a>
+                  <a class="site-list__sublink" href="product-01.html">- Каркасные дома</a>
                 </li>
                 <li class="site-list__subitem">
-                  <a class="site-list__sublink" href="#">- Дома из клеёного бруса</a>
+                  <a class="site-list__sublink" href="product-01.html">- Дома из клеёного бруса</a>
                 </li>
                 <li class="site-list__subitem">
-                  <a class="site-list__sublink" href="#">- Фахверковые дома</a>
+                  <a class="site-list__sublink" href="product-01.html">- Фахверковые дома</a>
                 </li>
                 <li class="site-list__subitem">
-                  <a class="site-list__sublink" href="#">- Дома из брёвен</a>
+                  <a class="site-list__sublink" href="product-01.html">- Дома из брёвен</a>
                 </li>
                 <li class="site-list__subitem">
-                  <a class="site-list__sublink" href="#">- Беседки</a>
+                  <a class="site-list__sublink" href="product-01.html">- Беседки</a>
                 </li>
                 <li class="site-list__subitem">
-                  <a class="site-list__sublink" href="#">- Ремонт и отделка</a>
+                  <a class="site-list__sublink" href="product-01.html">- Ремонт и отделка</a>
                 </li>
               </ul>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#gallery">Наши работы</a>
+              <a class="site-list__link js-menu-link" href="#gallery">Наши работы</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#about">О нас</a>
+              <a class="site-list__link js-menu-link" href="#about">О нас</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="#brands">Партнеры</a>
+              <a class="site-list__link js-menu-link" href="#brands">Партнеры</a>
             </li>
           </ul>
 

@@ -1,6 +1,6 @@
 import { initModal } from "./modal.js";
 
-const response = document.querySelector('.response-modal');
+const response = document.querySelector('#response');
 
 const responseModal = initModal(response);
 
