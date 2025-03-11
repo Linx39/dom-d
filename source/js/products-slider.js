@@ -1,9 +1,9 @@
 import { handleSwiperMode } from "./swiper-mode.js";
 
-const productsCardsClass = '.products__cards';
+const PRODUCTS_CARDS_CLASS = 'products__cards';
 
 const initProductsSwiper = () => {
-  const productsSwiper = new Swiper(productsCardsClass, {
+  const productsSwiper = new Swiper(`.${PRODUCTS_CARDS_CLASS}`, {
     slidesPerView: 'auto',
     spaceBetween: 30,
     centeredSlides: true,
@@ -20,4 +20,6 @@ const initProductsSwiper = () => {
   return productsSwiper;
 };
 
-handleSwiperMode(initProductsSwiper);
+if (document.querySelector(`.${PRODUCTS_CARDS_CLASS}`)) {
+  handleSwiperMode(initProductsSwiper);
+}

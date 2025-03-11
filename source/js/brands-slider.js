@@ -1,7 +1,9 @@
 import { Width } from "./const.js";
 
+const BRANDS_CARDS_CLASS = 'brands__cards';
+
 const initBrandsSwiper = () => {
-  const brandsSwiper = new Swiper('.brands__cards', {
+  const brandsSwiper = new Swiper(`.${BRANDS_CARDS_CLASS}`, {
     slidesPerView: 'auto',
     spaceBetween: 25,
 
@@ -30,4 +32,8 @@ const initBrandsSwiper = () => {
   return brandsSwiper;
 };
 
-initBrandsSwiper();
+// initBrandsSwiper();
+
+if (document.querySelector(`.${BRANDS_CARDS_CLASS}`)) {
+  initBrandsSwiper();
+}

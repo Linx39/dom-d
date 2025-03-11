@@ -1,7 +1,9 @@
 import { handleSwiperMode } from "./swiper-mode.js";
 
+const ABOUT_CARDS_CLASS = 'about__cards';
+
 const initAboutSwiper = () => {
-  const aboutSwiper = new Swiper('.about__cards', {
+  const aboutSwiper = new Swiper(`.${ABOUT_CARDS_CLASS}`, {
     slidesPerView: 'auto',
     spaceBetween: 30,
     centeredSlides: true,
@@ -16,4 +18,6 @@ const initAboutSwiper = () => {
   return aboutSwiper;
 };
 
-handleSwiperMode(initAboutSwiper);
+if (document.querySelector(`.${ABOUT_CARDS_CLASS}`)) {
+  handleSwiperMode(initAboutSwiper);
+}

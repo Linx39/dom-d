@@ -1,7 +1,9 @@
 import { handleSwiperMode } from "./swiper-mode.js";
 
+const CALCULATION_MATERIALS_GROUP_CLASS = 'calculation__materials-group';
+
 const initMaterialsSwiper = () => {
-  const materialsSwiper = new Swiper('.calculation__materials-group', {
+  const materialsSwiper = new Swiper(`.${CALCULATION_MATERIALS_GROUP_CLASS}`, {
     slidesPerView: 2,
     spaceBetween: 12,
 
@@ -14,4 +16,9 @@ const initMaterialsSwiper = () => {
   return materialsSwiper;
 };
 
-handleSwiperMode(initMaterialsSwiper);
+// handleSwiperMode(initMaterialsSwiper);
+
+
+if (document.querySelector(`.${CALCULATION_MATERIALS_GROUP_CLASS}`)) {
+  handleSwiperMode(initMaterialsSwiper);
+}
