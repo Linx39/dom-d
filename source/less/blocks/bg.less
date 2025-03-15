@@ -1,0 +1,33 @@
+.bg {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    width: 908px;
+    height: 404px;
+
+    border-radius: 454px / 202px;
+    background: linear-gradient(180deg, #FFDC83 0%, #FBD26A 25%, #C17024 84.9%, #E3A548 100%);
+    filter: blur(308px);
+    transform: rotate(-26deg);
+
+    animation: move-diagonally 30s linear infinite;
+  }
+}
+
+@keyframes move-diagonally {
+  0% {
+    top: -454px;
+    right: -202px;
+  }
+  50% {
+    top: 100%;
+    right: 100%;
+  }
+  100% {
+    top: -454px;
+    right: -202px;
+  }
+}
