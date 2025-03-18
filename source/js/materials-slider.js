@@ -5,7 +5,7 @@ const CALCULATION_MATERIALS_GROUP_CLASS = 'calculation__materials-group';
 const initMaterialsSwiper = () => {
   const materialsSwiper = new Swiper(`.${CALCULATION_MATERIALS_GROUP_CLASS}`, {
     slidesPerView: 2,
-    spaceBetween: 12,
+    spaceBetween: 14,
 
     scrollbar: {
       el: '.calculation__materials-scrollbar',

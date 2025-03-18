@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="Строительство деревянных домов DOM-D">
         <title>Строительство деревянных домов DOM-D</title>
+        <link rel="stylesheet" href="fancybox/fancybox.css"/>
         <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
         <link rel="stylesheet" href="./css/style.min.css">
         <link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -113,7 +114,7 @@
         </nav>
       </header>
 
-      <main class="page__main page-main">
+      <main class="page__main">
         <section class="product-intro">
           <div class="product-intro__wrapper wrapper">
             <h1 class="product-intro__title">Каркасные <span>Дома</span></h1>
@@ -136,7 +137,9 @@
               Основная информация <br>
               о каркасных домах
             </h2>
-            <p class="product-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p class="product-info__text">
+              Каркасный дом — это дом, в основе которого есть несущий каркас. Он в свою очередь заполняется современными материалами для влаго-, ветро- и теплозащиты и обшивается отделочными материалами.
+            </p>
 
             <div class="product-info__img">
               <picture>
@@ -148,79 +151,87 @@
             </div>
 
             <h3 class="product-info__subtitle">Долговечность деревянного&nbsp;дома:</h3>
-            <p class="product-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="product-info__text">
+              Долговечность — главное преимущество дерева перед остальными строительными материалами. При соблюдении основных мер предосторожности, срок службы дома из бревна составит в среднем от 80 до 100 лет. Главное – качество материала, профессиональная строительная бригада и правильный уход хозяина. Если Вы учли все три пункта, то дом обязательно будет служить надежной крепостью не только Вам и Вашим детям и внукам, но ещё и правнукам.
+            </p>
             <h3 class="product-info__subtitle">Пожаробезопасность деревянного&nbsp;дома</h3>
-            <p class="product-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="product-info__text">
+              Древесина действительно может очень быстро воспламеняться – это так. Но при этом именно она считается одним из самых пожаробезопасных материалов в случае непосредственного возникновения пожара, необходимости эвакуации людей и прочих экстренных мероприятий. Такой «парадокс горючести» объясняется тем, что дерево обладает большой инертностью горения за счет обугливания. То есть если даже древесина воспламеняется и начинает гореть, активная стадия горения достаточно часто переходит в тление. Поэтому конструкция сохраняет свою устойчивость очень долго, не представляя угрозу обрушения.
+            </p>
 
             <a class="product-info__btn app-btn" href="#calculation" data-modal="#calculation">Заказать расчет</a>
           </div>
         </section>
 
-        <div class="bg">
-          <section class="product-advantages">
-            <div class="product-advantages__wrapper wrapper">
-              <h2 class="product-advantages__title app-title app-title--product">Преимущества каркасных&nbsp;домов</h2>
-              <p class="product-advantages__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div class="product-advantages__list">
-                <div class="product-advantages__item product-advantages__item--speed">
-                  <span class="product-advantages__item-number">01/</span>
-                  <span class="product-advantages__item-text">Скорость строительства</span>
-                </div>
-                <div class="product-advantages__img">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="images/product-advantages/product-advantages-01-laptop.webp">
-                    <source media="(min-width: 768px)" srcset="images/product-advantages/product-advantages-01-tablet.webp">
-                    <img src="images/product-advantages/product-advantages-01-mobile.webp" width="163" height="103" alt="Готовый дом." loading="lazy">
-                  </picture>
-                </div>
+        <section class="product-advantages">
+          <div class="product-advantages__wrapper wrapper">
+            <h2 class="product-advantages__title app-title app-title--product">Преимущества каркасных&nbsp;домов</h2>
+            <p class="product-advantages__text">
+              Технологию обкатывали и избавляли от проблем десятилетиями, так что преимуществ у каркасных домов всё-таки больше, чем недостатков. А минусы большей частью зависят от стройматериалов, проработки проекта и квалификации строителей.
+            </p>
+            <div class="product-advantages__list">
+              <div class="product-advantages__item product-advantages__item--speed">
+                <span class="product-advantages__item-number">01/</span>
+                <span class="product-advantages__item-text">Скорость строительства</span>
+              </div>
+              <div class="product-advantages__img">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="images/product-advantages/product-advantages-01-laptop.webp">
+                  <source media="(min-width: 768px)" srcset="images/product-advantages/product-advantages-01-tablet.webp">
+                  <img src="images/product-advantages/product-advantages-01-mobile.webp" width="163" height="103" alt="Готовый дом." loading="lazy">
+                </picture>
+              </div>
 
-                <div class="product-advantages__item product-advantages__item--price">
-                  <span class="product-advantages__item-number">02/</span>
-                  <span class="product-advantages__item-text">Стоимость строительства</span>
-                </div>
-                <div class="product-advantages__img">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="images/product-advantages/product-advantages-02-laptop.webp">
-                    <source media="(min-width: 768px)" srcset="images/product-advantages/product-advantages-02-tablet.webp">
-                    <img src="images/product-advantages/product-advantages-02-mobile.webp" width="163" height="103" alt="Готовый дом." loading="lazy">
-                  </picture>
-                </div>
+              <div class="product-advantages__item product-advantages__item--price">
+                <span class="product-advantages__item-number">02/</span>
+                <span class="product-advantages__item-text">Стоимость строительства</span>
+              </div>
+              <div class="product-advantages__img">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="images/product-advantages/product-advantages-02-laptop.webp">
+                  <source media="(min-width: 768px)" srcset="images/product-advantages/product-advantages-02-tablet.webp">
+                  <img src="images/product-advantages/product-advantages-02-mobile.webp" width="163" height="103" alt="Готовый дом." loading="lazy">
+                </picture>
+              </div>
 
-                <div class="product-advantages__item product-advantages__item--design">
-                  <span class="product-advantages__item-number">03/</span>
-                  <span class="product-advantages__item-text">Экологичность и эксклюзивный дизайн</span>
-                </div>
-                <div class="product-advantages__img">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="images/product-advantages/product-advantages-03-laptop.webp">
-                    <source media="(min-width: 768px)" srcset="images/product-advantages/product-advantages-03-tablet.webp">
-                    <img src="images/product-advantages/product-advantages-03-mobile.webp" width="163" height="103" alt="Готовый дом." loading="lazy">
-                  </picture>
-                </div>
+              <div class="product-advantages__item product-advantages__item--design">
+                <span class="product-advantages__item-number">03/</span>
+                <span class="product-advantages__item-text">Экологичность и эксклюзивный дизайн</span>
+              </div>
+              <div class="product-advantages__img">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="images/product-advantages/product-advantages-03-laptop.webp">
+                  <source media="(min-width: 768px)" srcset="images/product-advantages/product-advantages-03-tablet.webp">
+                  <img src="images/product-advantages/product-advantages-03-mobile.webp" width="163" height="103" alt="Готовый дом." loading="lazy">
+                </picture>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section class="product-finishing">
-            <div class="product-finishing__wrapper wrapper">
-              <h2 class="product-finishing__title app-title app-title--product">Варианты отделки в деревянном доме</h2>
-              <p class="product-finishing__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div class="product-finishing__img"></div>
-              <p class="product-finishing__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-              <a class="product-finishing__btn app-btn" href="#feedback" data-modal="#feedback">Перезвонить мне</a>
-            </div>
-          </section>
+        <section class="product-finishing">
+          <div class="product-finishing__wrapper wrapper">
+            <h2 class="product-finishing__title app-title app-title--product">Варианты отделки в деревянном доме</h2>
+            <p class="product-finishing__text">
+              Отделка фасада и интерьера деревянного дома могут отличаться как жизнь до свадьбы и после. И дело тут не только в разных условиях среды, но и в разных задачах.
+            </p>
+            <div class="product-finishing__img"></div>
+            <p class="product-finishing__text">
+              Если экстерьер в первую очередь взаимодействует с ландшафтом, то варианты внутренней отделки дома, прежде всего, диктуют его планировка и хозяйские представления о гармоничном дизайне жилого пространства. Интерьер деревянного загородного дома может быть любым — ярким и спокойным, «городским» и «дачным», прогрессивным и старомодным, но только не скучным. Посмотрим, как можно использовать эстетику дерева внутри дома для разных случаев на примере реализованных проектов в России и за рубежом.
+            </p>
+            <a class="product-finishing__btn app-btn" href="#feedback" data-modal="#feedback">Перезвонить мне</a>
+          </div>
+        </section>
 
-          <section class="product-leadmagnet">
-            <div class="product-leadmagnet__wrapper wrapper">
-              <div class="product-leadmagnet__content">
-                <h2 class="product-leadmagnet__title app-title app-title--product">Еще сомневаетесь в своем выборе ?</h2>
-                <p class="product-leadmagnet__text">Закажите расчет стоимости Вашего дома и убедитесь, что&nbsp;комфорт доступней чем кажется</p>
-                <a class="product-leadmagnet__btn app-btn app-btn--light" href="#calculation" data-modal="#calculation">Заказать расчет</a>
-              </div>
+        <section class="product-leadmagnet">
+          <div class="product-leadmagnet__wrapper wrapper">
+            <div class="product-leadmagnet__content">
+              <h2 class="product-leadmagnet__title app-title app-title--product">Еще сомневаетесь в своем выборе ?</h2>
+              <p class="product-leadmagnet__text">Закажите расчет стоимости Вашего дома и убедитесь, что&nbsp;комфорт доступней чем кажется</p>
+              <a class="product-leadmagnet__btn app-btn app-btn--light" href="#calculation" data-modal="#calculation">Заказать расчет</a>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
 
         <section class="contacts" id="contacts">
           <div class="contacts__wrapper wrapper">
@@ -246,9 +257,9 @@
                 <h3 class="contacts__subtitle">Мы на связи</h3>
 
                 <div class="contacts__list">
-                  <a class="contacts-link contacts-link--adress" href="#">Россия, г. Санкт-Петербург<br>ул. Ленина, 111</a>
-                  <a class="contacts-link contacts-link--email" href="#">
-                    <span class="contacts-link-name">Эл.почта: </span>
+                  <a class="contact-link contact-link--adress" href="#">Россия, г. Санкт-Петербург<br>ул. Ленина, 111</a>
+                  <a class="contact-link contact-link--email" href="#">
+                    <span class="contact-link-name">Эл.почта: </span>
                     dom-d@gmail.com
                   </a>
                   <div class="contacts__messenger-list">
@@ -261,7 +272,7 @@
                       <span class="messenger-link__name">Telegram</span>
                     </a>
                   </div>
-                  <a class="contacts__phone contacts-link contacts-link--phone" href="tel:+780000000">
+                  <a class="contacts__phone contact-link contact-link--phone" href="tel:+780000000">
                     +7 (800) 000-00-00
                     <span class="contacts__phone-text">Мы на связи</span>
                   </a>
@@ -273,9 +284,9 @@
           </div>
         </section>
 
-        <section class="modal" id="calculation" aria-hidden="true" tabindex="-1">
+        <div class="modal" id="calculation" aria-hidden="true" tabindex="-1">
           <div class="calculation popup modal__wrapper" role="dialog" aria-modal="true">
-              <button class="calculation__close-btn popup__close-btn modal__close-btn">
+              <button class="popup__close-btn modal__close-btn">
                 <span class="visually-hidden">Закрыть окно</span>
               </button>
 
@@ -410,12 +421,12 @@
                 </div>
               </form>
           </div>
-        </section>
+        </div>
 
-        <section class="modal" id="feedback" aria-hidden="true" tabindex="-1">
+        <div class="modal" id="feedback" aria-hidden="true" tabindex="-1">
           <div class="feedback popup modal__wrapper" role="dialog" aria-modal="true">
             <div class="popup__wrapper">
-              <button class="feedback__close-btn popup__close-btn modal__close-btn">
+              <button class="popup__close-btn modal__close-btn">
                 <span class="visually-hidden">Закрыть окно</span>
               </button>
 
@@ -433,12 +444,12 @@
               </form>
             </div>
           </div>
-        </section>
+        </div>
 
         <div class="modal" id="response" aria-hidden="true" tabindex="-1">
           <div class="response popup modal__wrapper" role="dialog" aria-modal="true">
             <div class="popup__wrapper">
-              <button class="response__close-btn popup__close-btn modal__close-btn" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+              <button class="popup__close-btn modal__close-btn" type="button"><span class="visually-hidden">Закрыть окно</span></button>
               <p class="response__description response__description--success">
                 Спасибо за заявку!<br>В ближайшее время мы Вам перезвоним.
               </p>
@@ -491,12 +502,12 @@
           <div class="page-footer__contacts">
             <h3 class="page-footer__contacts-title">Контакты</h3>
             <div class="page-footer__contacts-list">
-              <a class="contacts-link contacts-link--adress" href="#">Россия, г. Санкт-Петербург<br>ул. Ленина, 111</a>
-              <a class="contacts-link contacts-link--email" href="#">
-                <span class="contacts-link__name">Эл.почта: </span>
+              <a class="contact-link contact-link--adress" href="#">Россия, г. Санкт-Петербург<br>ул. Ленина, 111</a>
+              <a class="contact-link contact-link--email" href="#">
+                <span class="contact-link__name">Эл.почта: </span>
                 dom-d@gmail.com
               </a>
-              <a class="contacts-link contacts-link--phone" href="tel:+780000000">+7 (800) 000-00-00</a>
+              <a class="contact-link contact-link--phone" href="tel:+780000000">+7 (800) 000-00-00</a>
             </div>
           </div>
 
@@ -531,6 +542,7 @@
         </div>
       </template>
 
+      <script src="fancybox/fancybox.umd.js"></script>
       <script src="https://unpkg.com/imask"></script>
       <script src="./pristine/pristine.min.js"></script>
       <script src="./swiper/swiper-bundle.min.js"></script>

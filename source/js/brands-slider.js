@@ -20,9 +20,6 @@ const initBrandsSwiper = () => {
 
     breakpoints: {
       [Width.MD]: {
-        spaceBetween: 25,
-      },
-      [Width.LG]: {
         spaceBetween: 40,
       },
       [Width.XL]: {

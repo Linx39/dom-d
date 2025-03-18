@@ -105,8 +105,9 @@ export const createSprite = () => {
 export const copy = (done) => {
   gulp.src([
     `${SOURCE_FOLDER}/fonts/*.*`,
-    `${SOURCE_FOLDER}/swiper/*.min.*`,
-    `${SOURCE_FOLDER}/pristine/*.min.*`
+    `${SOURCE_FOLDER}/swiper/*.*`,
+    `${SOURCE_FOLDER}/fancybox/*.*`,
+    `${SOURCE_FOLDER}/pristine/*.*`
   ], {
     base: `${SOURCE_FOLDER}`
   })

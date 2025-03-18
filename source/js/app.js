@@ -11,3 +11,5 @@ import './scroll-up.js';
 import './response-modal.js';
 import './form-validation.js';
 import './counters.js';
+
+Fancybox.bind("[data-fancybox]", {});

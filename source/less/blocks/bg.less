@@ -11,23 +11,23 @@
     border-radius: 454px / 202px;
     background: linear-gradient(180deg, #FFDC83 0%, #FBD26A 25%, #C17024 84.9%, #E3A548 100%);
     filter: blur(308px);
-    transform: rotate(-26deg);
+    transform: translateX(-50%) translateY(-50%) rotate(-26deg);
 
-    animation: move-diagonally 30s linear infinite;
+    animation: move-diagonally 20s linear infinite;
   }
 }
 
 @keyframes move-diagonally {
   0% {
-    top: -454px;
-    right: -202px;
+    top: 0;
+    left: 100%;
   }
   50% {
     top: 100%;
-    right: 100%;
+    left: 0;
   }
   100% {
-    top: -454px;
-    right: -202px;
+    top: 0;
+    left: 100%;
   }
 }

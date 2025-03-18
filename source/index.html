@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="Строительство деревянных домов DOM-D">
         <title>Строительство деревянных домов DOM-D</title>
+        <link rel="stylesheet" href="fancybox/fancybox.css"/>
         <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
         <link rel="stylesheet" href="css/style.min.css">
         <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -112,7 +113,7 @@
         </nav>
       </header>
 
-      <main class="page__main page-main">
+      <main class="page__main">
         <section class="intro">
           <div class="intro__wrapper wrapper">
             <h1 class="visually-hidden">Строительство деревянных домов DOM-D</h1>
@@ -205,33 +206,33 @@
           </div>
         </section>
 
-        <div class="bg">
-          <section class="offer">
-            <div class="offer__wrapper wrapper">
-              <h2 class="offer__title app-title"><b>Приступим cегодня</b></h2>
-              <p class="offer__text">Напишите нам, чтобы получить персональное предложение</p>
+        <section class="offer">
+          <div class="offer__wrapper wrapper">
+            <h2 class="offer__title app-title"><b>Приступим cегодня</b></h2>
+            <p class="offer__text">Напишите нам, чтобы получить персональное предложение</p>
 
-              <div class="offer__content">
-                <h3 class="offer__subtitle">Cтроительство дома не&nbsp;покажешь картинкой</h3>
-                <p class="offer__description">За каждым домом стоит целая история, смотри полезные  презентации у нас на канале.</p>
+            <div class="offer__content">
+              <h3 class="offer__subtitle">Cтроительство дома не&nbsp;покажешь картинкой</h3>
+              <p class="offer__description">За каждым домом стоит целая история, смотри полезные  презентации у нас на канале.</p>
 
-                <div class="offer__video">
-                  <picture>
-                    <source media="(min-width: 1800px)" srcset="images/offer/offer-desktop.webp">
-                    <source media="(min-width: 992px)" srcset="images/offer/offer-laptop.webp">
-                    <img src="images/offer/offer-mobile.webp" width="321" height="274" alt="Презентация.">
-                  </picture>
+              <div class="offer__video">
+                <picture>
+                  <source media="(min-width: 1800px)" srcset="images/offer/offer-desktop.webp">
+                  <source media="(min-width: 992px)" srcset="images/offer/offer-laptop.webp">
+                  <img src="images/offer/offer-mobile.webp" width="321" height="274" alt="Презентация.">
+                </picture>
 
-                  <button class="offer__video-btn">
-                    <span class="visually-hidden">Воспроизвести видео</span>
-                  </button>
-                </div>
-
-                <a class="offer__btn app-btn" href="#calculation" data-modal="#calculation">Заказать расчет</a>
+                <button class="offer__video-btn">
+                  <span class="visually-hidden">Воспроизвести видео</span>
+                </button>
               </div>
-            </div>
-          </section>
 
+              <a class="offer__btn app-btn" href="#calculation" data-modal="#calculation">Заказать расчет</a>
+            </div>
+          </div>
+        </section>
+
+        <div class="bg">
           <section class="advantages">
             <div class="advantages__wrapper wrapper">
               <h2 class="advantages__title app-title">Заботимся о Вашем <b>спокойствии</b></h2>
@@ -274,58 +275,64 @@
           <div class="gallery__cards swiper wrapper-width">
             <div class="gallery__list swiper-wrapper">
               <div class="gallery__item swiper-slide">
-                <div class="gallery__img">
+                <a class="gallery__img" href="images/gallery/gallery-01-full.webp" data-fancybox="gallery">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="images/gallery/gallery-01-desktop.webp">
                     <source media="(min-width: 1280px)" srcset="images/gallery/gallery-01-laptop.webp">
-                    <img src="images/gallery/gallery-01-mobile.webp" width="256" height="240" alt="Готовый дом." loading="lazy">
+                    <source media="(min-width: 768px)" srcset="images/gallery/gallery-01-tablet.webp">
+                    <img src="images/gallery/gallery-01-mobile.webp" width="375" height="352" alt="Готовый дом." loading="lazy">
                   </picture>
-                </div>
+                </a>
               </div>
               <div class="gallery__item swiper-slide">
-                <div class="gallery__img">
+                <a class="gallery__img" href="images/gallery/gallery-02-full.webp" data-fancybox="gallery">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="images/gallery/gallery-02-desktop.webp">
                     <source media="(min-width: 1280px)" srcset="images/gallery/gallery-02-laptop.webp">
-                    <img src="images/gallery/gallery-02-mobile.webp" width="256" height="240" alt="Готовый дом." loading="lazy">
+                    <source media="(min-width: 768px)" srcset="images/gallery/gallery-02-tablet.webp">
+                    <img src="images/gallery/gallery-02-mobile.webp" width="375" height="352" alt="Готовый дом." loading="lazy">
                   </picture>
-                </div>
+                </a>
               </div>
               <div class="gallery__item swiper-slide">
-                <div class="gallery__img">
+                <a class="gallery__img" href="images/gallery/gallery-03-full.webp" data-fancybox="gallery">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="images/gallery/gallery-03-desktop.webp">
                     <source media="(min-width: 1280px)" srcset="images/gallery/gallery-03-laptop.webp">
-                    <img src="images/gallery/gallery-03-mobile.webp" width="256" height="240" alt="Готовый дом." loading="lazy">
+                    <source media="(min-width: 768px)" srcset="images/gallery/gallery-03-tablet.webp">
+                    <img src="images/gallery/gallery-03-mobile.webp" width="375" height="352" alt="Готовый дом." loading="lazy">
                   </picture>
-                </div>
+                </a>
               </div>
               <div class="gallery__item swiper-slide">
-                <div class="gallery__img">
+                <a class="gallery__img" href="images/gallery/gallery-04-full.webp" data-fancybox="gallery">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="images/gallery/gallery-04-desktop.webp">
                     <source media="(min-width: 1280px)" srcset="images/gallery/gallery-04-laptop.webp">
-                    <img src="images/gallery/gallery-04-mobile.webp" width="256" height="240" alt="Готовый дом." loading="lazy">
+                    <source media="(min-width: 768px)" srcset="images/gallery/gallery-04-tablet.webp">
+                    <img src="images/gallery/gallery-04-mobile.webp" width="375" height="352" alt="Готовый дом." loading="lazy">
                   </picture>
-                </div>
+                </a>
               </div>
               <div class="gallery__item swiper-slide">
-                <div class="gallery__img">
+                <a class="gallery__img" href="images/gallery/gallery-05-full.webp" data-fancybox="gallery">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="images/gallery/gallery-05-desktop.webp">
                     <source media="(min-width: 1280px)" srcset="images/gallery/gallery-05-laptop.webp">
-                    <img src="images/gallery/gallery-05-mobile.webp" width="256" height="240" alt="Готовый дом." loading="lazy">
+                    <source media="(min-width: 768px)" srcset="images/gallery/gallery-05-tablet.webp">
+                    <img src="images/gallery/gallery-05-mobile.webp" width="375" height="352" alt="Готовый дом." loading="lazy">
                   </picture>
-                </div>
+                </a>
               </div>
               <div class="gallery__item swiper-slide">
-                <div class="gallery__img">
+                <a class="gallery__img" href="images/gallery/gallery-06-full.webp" data-fancybox="gallery">
                   <picture>
                     <source media="(min-width: 1800px)" srcset="images/gallery/gallery-06-desktop.webp">
                     <source media="(min-width: 1280px)" srcset="images/gallery/gallery-06-laptop.webp">
-                    <img src="images/gallery/gallery-06-mobile.webp" width="256" height="240" alt="Готовый дом." loading="lazy">
+                    <source media="(min-width: 768px)" srcset="images/gallery/gallery-06-tablet.webp">
+                    <img src="images/gallery/gallery-06-mobile.webp" width="375" height="352" alt="Готовый дом." loading="lazy">
                   </picture>
-                </div>
+                </a>
               </div>
             </div>
 
@@ -352,10 +359,10 @@
                 <img src="images/about/about-mobile.webp" width="335" height="539" alt="Фото руководителя." loading="lazy">
               </picture>
 
-              <p class="about__text font-text">
+              <p class="about__text">
                 <b>Здравствуйте, меня зовут<br>
                 Александр&nbsp;Иванов.</b><br>
-                Я руководитель компании <b>DOM-D</b></p>
+                Я руководитель компании <b>DOM&nbsp;-&nbsp;D</b></p>
             </div>
 
             <div class="about__cards swiper">
@@ -414,7 +421,7 @@
                     <span class="visually-hidden">Youtube</span>
                   </a>
                 </span>
-                <span class="statistics__name">Наши <b>ВИДЕО</b> <br> об отделке <span>и устройстве </span>смотрите на канале <b>DOM-D</b></span>
+                <span class="statistics__name">Наши <b>ВИДЕО</b> <br> об отделке <span>и устройстве </span>смотрите на канале <b>DOM&nbsp;-&nbsp;D</b></span>
               </li>
             </ul>
           </div>
@@ -488,9 +495,9 @@
                 <h3 class="contacts__subtitle">Мы на связи</h3>
 
                 <div class="contacts__list">
-                  <a class="contacts-link contacts-link--adress" href="#">Россия, г. Санкт-Петербург<br>ул. Ленина, 111</a>
-                  <a class="contacts-link contacts-link--email" href="#">
-                    <span class="contacts-link-name">Эл.почта: </span>
+                  <a class="contact-link contact-link--adress" href="#">Россия, г. Санкт-Петербург<br>ул. Ленина, 111</a>
+                  <a class="contact-link contact-link--email" href="#">
+                    <span class="contact-link-name">Эл.почта: </span>
                     dom-d@gmail.com
                   </a>
                   <div class="contacts__messenger-list">
@@ -503,7 +510,7 @@
                       <span class="messenger-link__name">Telegram</span>
                     </a>
                   </div>
-                  <a class="contacts__phone contacts-link contacts-link--phone" href="tel:+780000000">
+                  <a class="contacts__phone contact-link contact-link--phone" href="tel:+780000000">
                     +7 (800) 000-00-00
                     <span class="contacts__phone-text">Мы на связи</span>
                   </a>
@@ -517,7 +524,7 @@
 
         <div class="modal" id="calculation" aria-hidden="true" tabindex="-1">
           <div class="calculation popup modal__wrapper" role="dialog" aria-modal="true">
-              <button class="calculation__close-btn popup__close-btn modal__close-btn">
+              <button class="popup__close-btn modal__close-btn">
                 <span class="visually-hidden">Закрыть окно</span>
               </button>
 
@@ -657,7 +664,7 @@
         <div class="modal" id="feedback" aria-hidden="true" tabindex="-1">
           <div class="feedback popup modal__wrapper" role="dialog" aria-modal="true">
             <div class="popup__wrapper">
-              <button class="feedback__close-btn popup__close-btn modal__close-btn">
+              <button class="popup__close-btn modal__close-btn">
                 <span class="visually-hidden">Закрыть окно</span>
               </button>
 
@@ -680,7 +687,7 @@
         <div class="modal" id="response" aria-hidden="true" tabindex="-1">
           <div class="response popup modal__wrapper" role="dialog" aria-modal="true">
             <div class="popup__wrapper">
-              <button class="response__close-btn popup__close-btn modal__close-btn" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+              <button class="popup__close-btn modal__close-btn" type="button"><span class="visually-hidden">Закрыть окно</span></button>
               <p class="response__description response__description--success">
                 Спасибо за заявку!<br>В ближайшее время мы Вам перезвоним.
               </p>
@@ -733,12 +740,12 @@
           <div class="page-footer__contacts">
             <h3 class="page-footer__contacts-title">Контакты</h3>
             <div class="page-footer__contacts-list">
-              <a class="contacts-link contacts-link--adress" href="#">Россия, г. Санкт-Петербург<br>ул. Ленина, 111</a>
-              <a class="contacts-link contacts-link--email" href="#">
-                <span class="contacts-link__name">Эл.почта: </span>
+              <a class="contact-link contact-link--adress" href="#">Россия, г. Санкт-Петербург<br>ул. Ленина, 111</a>
+              <a class="contact-link contact-link--email" href="#">
+                <span class="contact-link__name">Эл.почта: </span>
                 dom-d@gmail.com
               </a>
-              <a class="contacts-link contacts-link--phone" href="tel:+780000000">+7 (800) 000-00-00</a>
+              <a class="contact-link contact-link--phone" href="tel:+780000000">+7 (800) 000-00-00</a>
             </div>
           </div>
 
@@ -773,6 +780,7 @@
         </div>
       </template>
 
+      <script src="fancybox/fancybox.umd.js"></script>
       <script src="https://unpkg.com/imask"></script>
       <script src="pristine/pristine.min.js"></script>
       <script src="swiper/swiper-bundle.min.js"></script>
