@@ -2,6 +2,8 @@
   padding-top: 70px;
   padding-bottom: 50px;
 
+  overflow: hidden;
+
   @media (min-width: @md-width) {
     padding-top: 91px;
     padding-bottom: 87px;
@@ -19,15 +21,15 @@
 }
 
 .brands__wrapper {
-  @media (min-width: @xl-width) {
-    padding-left: 125px;
-    padding-right: 125px;
-  }
+  // @media (min-width: @xl-width) {
+  //   padding-left: 125px;
+  //   padding-right: 125px;
+  // }
 
-  @media (min-width: @xxl-width) {
-    padding-left: 230px;
-    padding-right: 230px;
-  }
+  // @media (min-width: @xxl-width) {
+  //   padding-left: 230px;
+  //   padding-right: 230px;
+  // }
 }
 
 .brands__title {
@@ -53,6 +55,8 @@
 
   padding: 0 40px;
 
+  overflow: visible;
+
   @media (min-width: @md-width) {
     padding: 0 76px;
   }
@@ -71,6 +75,13 @@
   width: 100%;
   min-height: 110px;
 
+  transition: opacity .5s;
+  opacity: .2;
+
+  &--visible {
+    opacity: 1;
+  }
+
   @media (min-width: @md-width) {
     width: auto;
   }
@@ -88,10 +99,10 @@
   z-index: 1;
 
   &--prev {
-    left: 0;
+    left: 4px;
   }
 
   &--next {
-    right: 0;
+    right: 4px;
   }
 }

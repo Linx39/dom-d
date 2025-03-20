@@ -5,10 +5,12 @@ const BRANDS_CARDS_CLASS = 'brands__cards';
 const initBrandsSwiper = () => {
   const brandsSwiper = new Swiper(`.${BRANDS_CARDS_CLASS}`, {
     slidesPerView: 'auto',
-    spaceBetween: 25,
+    spaceBetween: 40,
+    watchSlidesProgress: true,
+    slideFullyVisibleClass: 'brands__item--visible',
     loop: true,
     autoplay: {
-      delay: 2000,
+      delay: 1000,
       pauseOnMouseEnter: true,
     },
 

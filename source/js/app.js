@@ -12,4 +12,6 @@ import './response-modal.js';
 import './form-validation.js';
 import './counters.js';
 
-Fancybox.bind("[data-fancybox]", {});
+Fancybox.bind("[data-fancybox]", {
+  hideScrollbar: false,
+});
