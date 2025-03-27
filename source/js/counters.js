@@ -1,39 +1,39 @@
 const DURATION = 1000;
 
-const countersWrapper = document.querySelector('.js-counters-wrapper');
+const countersWrappers = document.querySelectorAll('.js-counters-wrapper');
 
-if (countersWrapper) {
-  const counters = document.querySelectorAll('.js-counter');
+if (countersWrappers) {
+  countersWrappers.forEach(wrapper => {
+    const counters = wrapper.querySelectorAll('.js-counter');
 
-  const isInViewport = (element) => {
-    const distance = element.getBoundingClientRect();
+    const isInViewport = (element) => {
+      const distance = element.offsetTop + element.offsetHeight / 2;
 
-    return (
-        distance.top >= 0 &&
-        distance.left >= 0 &&
-        distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        distance.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  };
+      return (
+        distance <= window.pageYOffset + window.innerHeight &&
+        distance >= window.pageYOffset
+      );
+    };
 
-  const activateCounters = () => {
-    if(isInViewport(countersWrapper)) {
-      window.removeEventListener('scroll', activateCounters);
+    const activateCounters = () => {
+      if(isInViewport(wrapper)) {
+        window.removeEventListener('scroll', activateCounters);
 
-      counters.forEach(counter => {
-        let start = +counter.innerHTML;
-        const end = +counter.dataset.max;
+        counters.forEach(counter => {
+          let start = +counter.innerHTML;
+          const end = +counter.dataset.max;
 
-        const interval = setInterval(() => {
-          counter.innerHTML = ++start;
-          if(start === end) {
-            clearInterval(interval);
-          }
-        }, DURATION / end );
-      })
-    }
-  };
+          const interval = setInterval(() => {
+            counter.innerHTML = ++start;
+            if(start === end) {
+              clearInterval(interval);
+            }
+          }, DURATION / end );
+        })
+      }
+    };
 
-  window.addEventListener('DOMContentLoaded', activateCounters);
-  window.addEventListener('scroll', activateCounters);
-}
+    window.addEventListener('DOMContentLoaded', activateCounters);
+    window.addEventListener('scroll', activateCounters);
+  });
+};
