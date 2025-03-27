@@ -47,7 +47,7 @@ export const styles = () => {
 export const scripts = () => {
   return gulp.src(`${SOURCE_FOLDER}/js/*.js`)
     .pipe(webpack({
-      mode: 'development',
+      mode: 'production',
       devtool: 'source-map',
       output: {
           filename: 'app.min.js',
@@ -56,16 +56,6 @@ export const scripts = () => {
     .pipe(gulp.dest(`${PUBLIC_FOLDER}/js`))
     .pipe(browser.stream());
 }
-
-// Images
-// export const optimizeImages = () => {
-//   return gulp.src([
-//     `${SOURCE_FOLDER}/images/**/*.{png,jpg,svg}`,
-//     `!${SOURCE_FOLDER}/images/sprite/*`
-//   ])
-//     .pipe(imagemin())
-//     .pipe(gulp.dest(`${PUBLIC_FOLDER}/images`));
-// }
 
 export const optimizeImages = () => {
   return gulp.src([
@@ -105,6 +95,7 @@ export const createSprite = () => {
 export const copy = (done) => {
   gulp.src([
     `${SOURCE_FOLDER}/fonts/*.*`,
+    `${SOURCE_FOLDER}/video/*.*`,
     `${SOURCE_FOLDER}/imask/*.*`,
     `${SOURCE_FOLDER}/swiper/*.*`,
     `${SOURCE_FOLDER}/fancybox/*.*`,
